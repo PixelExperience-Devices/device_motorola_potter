@@ -374,4 +374,7 @@
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">true</bool>
 
+   <!-- Should the pinner service pin the Camera application? -->
+   <bool name="config_pinnerCameraApp">true</bool>
+
 </resources>
