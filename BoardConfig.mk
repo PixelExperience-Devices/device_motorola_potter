@@ -245,6 +245,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := false
 
+# Use mke2fs to create ext4 images
+TARGET_USES_MKE2FS := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
