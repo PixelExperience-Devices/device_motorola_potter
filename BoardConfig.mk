@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include vendor/motorola/potter/BoardConfigVendor.mk
+-include vendor/moto/potter/BoardConfigVendor.mk
 
-DEVICE_PATH := device/motorola/potter
+DEVICE_PATH := device/moto/potter
 
 BOARD_VENDOR := motorola-qcom
 
@@ -54,7 +54,7 @@ TARGET_CUSTOM_DTBTOOL := dtbTool_moto
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := potter_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_SOURCE := kernel/moto/msm8953
 
 # Audio
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -85,10 +85,6 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
-
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true

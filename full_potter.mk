@@ -15,8 +15,4 @@
 #
 
 # Inherit from potter device
-$(call inherit-product, device/motorola/potter/device.mk)
-
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := potter
-PRODUCT_NAME := full_potter
+$(call inherit-product, device/moto/potter/device.mk)
