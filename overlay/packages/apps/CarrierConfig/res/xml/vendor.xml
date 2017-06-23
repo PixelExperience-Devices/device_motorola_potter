@@ -70,18 +70,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="show_apn_setting_cdma_bool" value="true" />
         <!-- Config to enable video conference call support -->
         <boolean name="support_video_conference_call_bool" value="true"/>
-        <!-- Config that controls whether to show static image related UI elements or not
-             eg. static image option under IMS Settings, static image in preview window,
-             hide me button in active call screen etc. -->
-        <boolean name="show_static_image_ui" value="false"/>
         <!-- Config that controls whether to stop video preview video and show static image
              in video preview or not -->
         <boolean name="transmit_static_image" value="false"/>
         <boolean name="show_video_quality_ui" value="false" />
-
-        <!-- Config for RTT feature support -->
-        <boolean name="carrier_rtt_supported" value="false" />
-
+        <!-- Config to control the voWiFi call quality indication. -->
+        <boolean name="vowifi_call_quality" value="false" />
     </carrier_config>
 
     <carrier_config mcc="204" mnc="04">
@@ -108,8 +102,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -123,6 +115,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="854">
@@ -133,8 +126,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -148,6 +139,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="855">
@@ -158,8 +150,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -173,6 +163,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="856">
@@ -183,8 +174,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -198,6 +187,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="857">
@@ -208,8 +198,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -223,6 +211,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="858">
@@ -233,8 +222,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -248,6 +235,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="859">
@@ -258,8 +246,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -273,6 +259,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="860">
@@ -283,8 +270,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -298,6 +283,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="861">
@@ -308,8 +294,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -323,6 +307,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="862">
@@ -333,8 +318,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -348,6 +331,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="863">
@@ -358,8 +342,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -373,6 +355,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="864">
@@ -383,8 +366,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -398,6 +379,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="865">
@@ -408,8 +390,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -423,6 +403,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="866">
@@ -433,8 +414,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -448,6 +427,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="867">
@@ -458,8 +438,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -473,6 +451,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="868">
@@ -483,8 +462,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -498,6 +475,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="869">
@@ -508,8 +486,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -523,6 +499,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="870">
@@ -533,8 +510,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -548,6 +523,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="871">
@@ -558,8 +534,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -573,6 +547,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="872">
@@ -583,8 +558,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -598,6 +571,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="873">
@@ -608,8 +582,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -623,6 +595,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="405" mnc="874">
@@ -633,8 +606,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_hide_preview_in_vt_confcall" value="true" />
         <boolean name="config_carrier_specific_network_type_display" value="true"/>
         <boolean name="remove_modify_call_capability" value="true" />
-        <boolean name="transmit_static_image" value="true"/>
-        <boolean name="show_static_image_ui" value="true"/>
         <boolean name="config_dds_switch_alert_dialog_supported" value="true"/>
         <boolean name="show_video_quality_toast" value="false"/>
         <boolean name="show_call_session_event_toast" value="false"/>
@@ -648,6 +619,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="false"/>
         </string-array>
         <boolean name="show_video_quality_ui" value="true" />
+        <boolean name="vowifi_call_quality" value="true" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="05">
@@ -967,12 +939,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
     </carrier_config>
 
-    <carrier_config mcc="310" mnc="00">
-        <boolean name="carrier_rtt_supported" value="true" />
-        <boolean name="carrier_rtt_supported_on_vtcalls" value="true"/>
-        <boolean name="carrier_rtt_upgrade_supported" value="true"/>
-    </carrier_config>
-
     <carrier_config mcc="310" mnc="030">
         <boolean name="config_enable_display_14digit_imei" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
@@ -1038,9 +1004,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="310" mnc="260">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="carrier_rtt_supported" value="true" />
-        <boolean name="carrier_rtt_supported_on_vtcalls" value="true"/>
-        <boolean name="carrier_rtt_upgrade_supported" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="310" mnc="160">
@@ -1053,9 +1016,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="310" mnc="210">
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
-        <boolean name="carrier_rtt_supported" value="true" />
-        <boolean name="carrier_rtt_supported_on_vtcalls" value="true"/>
-        <boolean name="carrier_rtt_upgrade_supported" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="310" mnc="220">
@@ -1116,9 +1076,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="311" mnc="480">
         <boolean name="support_video_conference_call_bool" value="false"/>
-        <boolean name="carrier_rtt_supported" value="true" />
-        <boolean name="carrier_rtt_supported_on_vtcalls" value="false"/>
-        <boolean name="carrier_rtt_upgrade_supported" value="false"/>
     </carrier_config>
 
 </carrier_config_list>
