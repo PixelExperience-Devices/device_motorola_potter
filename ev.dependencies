@@ -1,23 +1,23 @@
 [
  {
-    "repository": "android_kernel/moto/msm8953",
+    "repository": "android_kernel_moto_msm8953",
     "target_path": "kernel/moto/msm8953",
     "dep_type": "kernel"
  },
  {
     "repository": "android_external_bson",
     "target_path": "external/bson",
-    "dep_type": "external",
+    "dep_type": "external"
  },
  {
     "repository": "android_external_libnetfilter_conntrack",
     "target_path": "external/libnetfilter_conntrack",
-    "dep_type": "external",
+    "dep_type": "external"
  },
  {
     "repository": "android_external_libnfnetlink",
     "target_path": "external/libnfnetlink",
-    "dep_type": "external",
+    "dep_type": "external"
  },
  {
     "repository": "android_hardware_qcom_audio-caf",
