@@ -5,6 +5,11 @@
     "dep_type": "kernel"
  },
  {
+    "repository": "android_external_bson",
+    "target_path": "external/bson",
+    "dep_type": "external",
+ },
+ {
     "repository": "android_external_libnetfilter_conntrack",
     "target_path": "external/libnetfilter_conntrack",
     "dep_type": "external",
@@ -16,7 +21,7 @@
  },
  {
     "repository": "android_hardware_qcom_audio-caf",
-    "target_path": "hardware/qcom/audio-caf/msm8960",
+    "target_path": "hardware/qcom/audio-caf/msm8937",
     "dep_type": "hardware",
     "branch": "ng-7.1-8937"
  },
