@@ -198,6 +198,10 @@ PRODUCT_PACKAGES += \
     lights.msm8953 \
     android.hardware.light@2.0-impl
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert
