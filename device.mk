@@ -382,12 +382,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-v28.so
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.potter
 
 # Vibrator
 PRODUCT_PACKAGES += \
