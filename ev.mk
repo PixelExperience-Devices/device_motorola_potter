@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Call this first so apn list is actually copied
-$(call inherit-product, $(SRC_EVERVOLV_DIR)/config/apns.mk)
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/moto/potter/full_potter.mk)
 
