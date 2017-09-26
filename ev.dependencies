@@ -4,38 +4,10 @@
     "target_path": "kernel/moto/msm8953",
     "dep_type": "kernel"
  },
- {
-    "repository": "android_external_bson",
-    "target_path": "external/bson",
+  {
+   "repository": "android_external_libnfc-nxp",
+   "target_path": "external/libnfc-nxp",
     "dep_type": "external"
- },
- {
-    "repository": "android_external_libnetfilter_conntrack",
-    "target_path": "external/libnetfilter_conntrack",
-    "dep_type": "external"
- },
- {
-    "repository": "android_external_libnfnetlink",
-    "target_path": "external/libnfnetlink",
-    "dep_type": "external"
- },
- {
-    "repository": "android_hardware_qcom_audio-caf",
-    "target_path": "hardware/qcom/audio-caf/msm8937",
-    "dep_type": "hardware",
-    "branch": "ng-7.1-8937"
- },
- {
-    "repository": "android_hardware_qcom_display-caf",
-    "target_path": "hardware/qcom/display-caf/msm8937",
-    "dep_type": "hardware",
-    "branch": "ng-7.1-8937"
- },
- {
-    "repository": "android_hardware_qcom_media-caf",
-    "target_path": "hardware/qcom/media-caf/msm8937",
-    "dep_type": "hardware",
-    "branch": "ng-7.1-8937"
  },
  {
    "repository": "android_vendor_nxp-nfc_opensource_frameworks",
