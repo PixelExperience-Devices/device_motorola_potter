@@ -251,8 +251,6 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_jni \
     nfc_nci.msm8953 \
     NfcNci \
     Tag \
