@@ -237,6 +237,7 @@ MOT_SENSOR_HUB_FEATURE_LIFT := true
 MOT_SENSOR_HUB_FEATURE_PEDO := true
 MOT_SENSOR_HUB_FEATURE_LA := true
 MOT_SENSOR_HUB_FEATURE_GR := true
+TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true

@@ -16,3 +16,6 @@ get_prop(system_app, qemu_hw_mainkeys_prop);
 binder_call(system_app, qtitetherservice_service);
 binder_call(system_app, wificond);
 
+# Screen off gestures
+allow system_app sysfs_screen_off_gestures:dir search;
+allow system_app sysfs_screen_off_gestures:file rw_file_perms;

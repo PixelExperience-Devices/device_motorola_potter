@@ -56,3 +56,5 @@ type proc_kernel_sched, fs_type;
 type sysfs_power_management, sysfs_type, fs_type;
 type proc_touchpanel, fs_type;
 
+# Screen off gestures
+type sysfs_screen_off_gestures, fs_type, sysfs_type, mlstrustedobject;

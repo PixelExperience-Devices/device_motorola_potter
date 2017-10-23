@@ -302,24 +302,27 @@
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
-   <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-   in hardware. -->
-   <bool name="config_setColorTransformAccelerated">true</bool>
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+    in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
 
-   <!-- Default files to pin via Pinner Service -->
-   <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-       <item>"/system/framework/arm64/boot-framework.oat"</item>
-       <item>"/system/framework/arm64/boot-framework.vdex"</item>
-       <item>"/system/framework/oat/arm64/services.odex"</item>
-       <item>"/system/framework/oat/arm64/services.vdex"</item>
-       <item>"/system/framework/arm64/boot.oat"</item>
-       <item>"/system/framework/arm64/boot.vdex"</item>
-       <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-       <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
-   </string-array>
+    <!-- Default files to pin via Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/arm64/boot-framework.vdex"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/oat/arm64/services.vdex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/arm64/boot.vdex"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
+    </string-array>
 
-   <!-- Should the pinner service pin the Camera application? -->
-   <bool name="config_pinnerCameraApp">true</bool>
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Whether device has turbo power charging support -->
     <bool name="config_hasTurboPowerCharger">true</bool>
