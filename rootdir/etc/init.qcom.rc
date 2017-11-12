@@ -26,6 +26,7 @@
 #
 
 import /init.mmi.rc
+import init.safailnet.rc
 
 on early-init
     mount tracefs tracefs /sys/kernel/tracing
