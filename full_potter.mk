@@ -15,4 +15,5 @@
 #
 
 # Inherit from potter device
-$(call inherit-product, device/moto/potter/device.mk)
+$(call inherit-product, device/motorola/potter/device.mk)
+$(call inherit-product, device/motorola/potter/dexpreopt.mk)
