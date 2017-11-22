@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    copybit.msm8953 \
     gralloc.msm8953 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
@@ -135,6 +136,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.configstore@1.0-service \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libgenlock \
@@ -142,7 +145,8 @@ PRODUCT_PACKAGES += \
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.renderscript@1.0-service
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -197,7 +201,7 @@ PRODUCT_PACKAGES += \
 
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+    $(LOCAL_PATH)/configs/sec_config:system/vendor/etc/sec_config
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -210,21 +214,28 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
-
+                    android.hardware.keymaster@3.0-impl \
+                    android.hardware.keymaster@3.0-service
 # IDC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8953 \
-    android.hardware.light@2.0-impl
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
+    lights.msm8953
+
+
+PRODUCT_PACKAGES += \
+    vendor.display.color@1.0-service \
+    vendor.display.color@1.0-impl
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.0-impl
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service.widevine
 
 # Media
 PRODUCT_PACKAGES += \
@@ -250,7 +261,9 @@ PRODUCT_COPY_FILES += \
 
 # Netutils
 PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
+    netutils-wrapper-1.0 \
+    libandroid_net \
+    libandroid_net_32
 
 PRODUCT_PACKAGES += \
     nfc_nci.msm8953 \
@@ -273,6 +286,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-service \
     android.hardware.power@1.0-impl \
     power.msm8953
 
@@ -293,6 +307,10 @@ PRODUCT_PACKAGES += \
     init.oem.hw.sh \
     init.qcom.rc \
     ueventd.qcom.rc
+
+# Powerhint configuration file
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/powerhint.xml:system/etc/powerhint.xml
 
 # Releasetools script
 PRODUCT_COPY_FILES += \
@@ -328,7 +346,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -348,6 +367,11 @@ PRODUCT_PACKAGES += \
 # WiFi HAL
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
+
+#Thermal
+PRODUCT_PACKAGES += android.hardware.thermal@1.0-impl \
+                    android.hardware.thermal@1.0-service \
+                    thermal.msm8953
 
 PRODUCT_PACKAGES += \
     libcurl \
