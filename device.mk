@@ -260,6 +260,8 @@ PRODUCT_PACKAGES += \
     libandroid_net_32
 
 PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
     nfc_nci.msm8953 \
     NfcNci \
     Tag \
