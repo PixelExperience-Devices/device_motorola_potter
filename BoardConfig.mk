@@ -134,6 +134,9 @@ BOARD_NO_CHARGER_LED := true
 # CNE / DPM
 BOARD_USES_QCNE := true
 
+# Compatability
+TARGET_NEEDS_HIDL_BASE_STUB := true
+
 # CPUsets
 ENABLE_CPUSETS := true
 
