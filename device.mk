@@ -186,6 +186,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
     libloc_api-rpc-qc
 
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0
+
 # IMS
 PRODUCT_PACKAGES += \
     libshim_ims
