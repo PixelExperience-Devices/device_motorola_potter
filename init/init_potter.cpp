@@ -72,7 +72,7 @@ void vendor_load_properties()
 
     // fingerprint
     property_override("ro.build.description", "potter-7.0/NPNS25.137-33-11/11:user/release-keys");
-    property_override("ro.build.fingerprint", "motorola/potter/potter:7.0/NPNS25.137-33-11/11:user/release-keys");
+    property_override("ro.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     property_set("ro.product.model", sku.c_str());
 
