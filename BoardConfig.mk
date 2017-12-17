@@ -143,6 +143,10 @@ ENABLE_CPUSETS := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Dexpreopt
+WITH_DEXPREOPT := true
+DONT_DEXPREOPT_PREBUILTS := true
+
 # Display
 HAVE_ADRENO_SOURCE:= false
 BOARD_USES_ADRENO := true
