@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo gzosp_potter-userdebug
+add_lunch_combo validus_potter-userdebug
