@@ -143,7 +143,7 @@ ENABLE_CPUSETS := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Dexpreopt
-WITH_DEXPREOPT := true
+WITH_DEXPREOPT ?= true
 DONT_DEXPREOPT_PREBUILTS := true
 
 # Display
