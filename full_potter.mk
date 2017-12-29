@@ -22,8 +22,5 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from potter device
 $(call inherit-product, device/moto/potter/device.mk)
 
-# Dexpreopt fixes
-$(call inherit-product, device/moto/potter/dexpreopt.mk)
-
 # for specific
 $(call inherit-product, vendor/moto/potter/potter-vendor.mk)
