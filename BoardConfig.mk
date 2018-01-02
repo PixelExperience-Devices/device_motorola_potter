@@ -137,9 +137,6 @@ BOARD_USES_QCNE := true
 # Compatability
 TARGET_NEEDS_HIDL_BASE_STUB := true
 
-# CPUsets
-ENABLE_CPUSETS := true
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
