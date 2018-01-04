@@ -27,6 +27,8 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <utils/Log.h>
+
 #include "hint-data.h"
 
 int hint_compare(struct hint_data *first_hint,
@@ -41,7 +43,7 @@ int hint_compare(struct hint_data *first_hint,
     }
 }
 
-void hint_dump(__attribute__((unused)) struct hint_data *hint)
+void hint_dump(struct hint_data *hint)
 {
-    /*ALOGI("hint_id: %lu", hint->hint_id);*/
+    ALOGV("hint_id: %lu", hint->hint_id);
 }
