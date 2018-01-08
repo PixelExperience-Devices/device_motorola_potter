@@ -305,9 +305,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.mmi.touch.sh \
-    init.qcom.ril.sh \
-    init.qcom.bt.sh \
     init.qcom.fm.sh \
     wlan_carrier_bin.sh
 
@@ -317,7 +314,6 @@ PRODUCT_PACKAGES += \
     init.mmi.laser.sh \
     init.mmi.rc \
     init.mmi.usb.rc \
-    init.oem.hw.sh \
     init.qcom.rc \
     init.safailnet.rc \
     ueventd.qcom.rc
