@@ -340,7 +340,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--<integer name="config_deviceHardwareKeys">64</integer>-->
+    <integer name="config_deviceHardwareKeys">64</integer>
 
     <!-- Support in Surfaceflinger for blur layers.
          NOTE: This requires additional hardware-specific code. -->
