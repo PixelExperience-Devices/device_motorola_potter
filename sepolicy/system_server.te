@@ -1,6 +1,6 @@
 
-allow system_server persist_file:dir rw_dir_perms;
-allow system_server persist_file:file rw_file_perms;
+#allow system_server persist_file:dir rw_dir_perms;
+#allow system_server persist_file:file rw_file_perms;
 
 binder_call(system_server, rild);
 
@@ -10,9 +10,9 @@ allow system_server sysfs_capsense:file rw_file_perms;
 allow system_server init:unix_stream_socket { read };
 # allow system_server dalvikcache_data_file:file { execute };
 
-allow system_server qti_debugfs:file { getattr open read };
+#allow system_server qti_debugfs:file { getattr open read };
 allow system_server init:unix_stream_socket write;
 
 allow system_server sensors_device:chr_file { ioctl open read };
 
-get_prop(system_server, alarm_boot_prop)
+#get_prop(system_server, alarm_boot_prop)
