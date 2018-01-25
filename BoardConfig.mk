@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include vendor/moto/potter/BoardConfigVendor.mk
+-include vendor/motorola/potter/BoardConfigVendor.mk
 
 DEVICE_PATH := device/moto/potter
 
@@ -59,6 +59,7 @@ TARGET_OTA_ASSERT_DEVICE := potter,potter_retail
 
 # GPS
 TARGET_NO_RPC := true
+USING_DEVICE_GPS := true
 USE_DEVICE_SPECIFIC_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 

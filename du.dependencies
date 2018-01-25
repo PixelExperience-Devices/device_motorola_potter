@@ -3,10 +3,5 @@
     "repository": "android_kernel_moto_msm8953",
     "target_path": "kernel/moto/msm8953",
     "dep_type": "kernel"
- },
- {
-   "repository": "android_external_libnfc-nxp",
-   "target_path": "external/libnfc-nxp",
-    "dep_type": "external"
  }
 ]
