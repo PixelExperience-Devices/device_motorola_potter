@@ -3,5 +3,10 @@
     "repository": "android_kernel_moto_msm8953",
     "target_path": "kernel/moto/msm8953",
     "dep_type": "kernel"
+ },
+ {
+    "repository": "android_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch" : "o8x-caf"
  }
 ]
