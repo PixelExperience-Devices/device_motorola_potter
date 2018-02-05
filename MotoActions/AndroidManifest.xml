@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.moto.actions"
+    package="com.dirtyunicorns.settings.device"
     android:sharedUserId="android.uid.system"
     >
 
@@ -26,7 +26,7 @@
 
         <provider
             android:name=".MotoActionsSearchIndexablesProvider"
-            android:authorities="com.moto.actions"
+            android:authorities="com.dirtyunicorns.settings.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
@@ -36,7 +36,7 @@
             </intent-filter>
         </provider>
 
-        <receiver android:name="com.moto.actions.BootCompletedReceiver">
+        <receiver android:name="com.dirtyunicorns.settings.device.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -54,7 +54,7 @@
             android:label="@string/ambient_display_title"
             android:theme="@style/MotoActions">
             <intent-filter>
-                <action android:name="com.moto.actions.DOZE_SETTINGS" />
+                <action android:name="com.dirtyunicorns.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -67,15 +67,6 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
-            <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_settings_gestures" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/device_gestures_summary" />
         </activity>
 
         <activity

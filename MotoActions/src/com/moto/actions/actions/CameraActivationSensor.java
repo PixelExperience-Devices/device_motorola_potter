@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions.actions;
+package com.dirtyunicorns.settings.device.actions;
 
 import java.util.List;
 
@@ -25,8 +25,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-import com.moto.actions.MotoActionsSettings;
-import com.moto.actions.SensorHelper;
+import com.dirtyunicorns.settings.device.MotoActionsSettings;
+import com.dirtyunicorns.settings.device.SensorHelper;
 
 public class CameraActivationSensor implements SensorEventListener, UpdatedStateNotifier {
     private static final String TAG = "MotoActions-CameraSensor";

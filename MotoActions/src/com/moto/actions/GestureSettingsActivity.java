@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions;
+package com.dirtyunicorns.settings.device;
 
 import android.os.Bundle;
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions;
+package com.dirtyunicorns.settings.device;
 
 import android.content.Intent;
 import android.os.Binder;

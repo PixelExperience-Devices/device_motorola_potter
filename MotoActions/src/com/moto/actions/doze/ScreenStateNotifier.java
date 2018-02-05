@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions.doze;
+package com.dirtyunicorns.settings.device.doze;
 
 public interface ScreenStateNotifier {
     public void screenTurnedOn();

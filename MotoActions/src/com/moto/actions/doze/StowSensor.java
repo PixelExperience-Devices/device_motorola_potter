@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions.doze;
+package com.dirtyunicorns.settings.device.doze;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -24,9 +24,9 @@ import android.util.Log;
 
 import java.lang.System;
 
-import com.moto.actions.MotoActionsSettings;
-import com.moto.actions.SensorAction;
-import com.moto.actions.SensorHelper;
+import com.dirtyunicorns.settings.device.MotoActionsSettings;
+import com.dirtyunicorns.settings.device.SensorAction;
+import com.dirtyunicorns.settings.device.SensorHelper;
 
 public class StowSensor implements ScreenStateNotifier, SensorEventListener {
     private static final String TAG = "MotoActions-StowSensor";

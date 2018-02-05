@@ -15,13 +15,13 @@
  * limitations under the License.
  */
 
-package com.moto.actions.doze;
+package com.dirtyunicorns.settings.device.doze;
 
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.moto.actions.SensorAction;
+import com.dirtyunicorns.settings.device.SensorAction;
 
 public class DozePulseAction implements SensorAction, ScreenStateNotifier {
     private static final String TAG = "MotoActions";

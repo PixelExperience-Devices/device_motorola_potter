@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions;
+package com.dirtyunicorns.settings.device;
 
 import java.util.List;
 import java.io.FileOutputStream;

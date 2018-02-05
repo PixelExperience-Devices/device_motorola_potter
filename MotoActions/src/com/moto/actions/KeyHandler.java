@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions;
+package com.dirtyunicorns.settings.device;
 
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
@@ -64,11 +64,11 @@ import android.widget.Toast;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import com.moto.actions.util.FileUtils;
+import com.dirtyunicorns.settings.device.util.FileUtils;
 
 import java.util.List;
 
-import static com.moto.actions.actions.Constants.*;
+import static com.dirtyunicorns.settings.device.actions.Constants.*;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -663,8 +663,8 @@ public class KeyHandler implements DeviceKeyHandler {
         if (ai != null && !ai.supportsPictureInPicture()) {
             try {
                 PackageManager pm = mContext.getPackageManager();
-                Resources resources = pm.getResourcesForApplication("com.moto.actions");
-                int resId = resources.getIdentifier("app_does_not_support_pip", "string", "com.moto.actions");
+                Resources resources = pm.getResourcesForApplication("com.dirtyunicorns.settings.device");
+                int resId = resources.getIdentifier("app_does_not_support_pip", "string", "com.dirtyunicorns.settings.device");
                 final String text = resources.getString(resId);
                 mHandler.post(new Runnable() {
                     public void run() {

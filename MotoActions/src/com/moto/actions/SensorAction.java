@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions;
+package com.dirtyunicorns.settings.device;
 
 public interface SensorAction {
     public void action();

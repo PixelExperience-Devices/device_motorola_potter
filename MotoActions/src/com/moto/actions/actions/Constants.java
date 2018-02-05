@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions.actions;
+package com.dirtyunicorns.settings.device.actions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +25,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.moto.actions.util.FileUtils;
+import com.dirtyunicorns.settings.device.util.FileUtils;
 
 public class Constants {
 

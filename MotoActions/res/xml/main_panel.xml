@@ -24,8 +24,8 @@
         android:summary="@string/device_gestures_summary"
         android:icon="@drawable/ic_settings_gestures">
             <intent
-                android:targetPackage="com.moto.actions"
-                android:targetClass="com.moto.actions.GestureSettingsActivity" />
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.GestureSettingsActivity" />
     </Preference>
 
     <Preference
@@ -34,8 +34,8 @@
         android:summary="@string/ambient_display_manage_summary"
         android:icon="@drawable/ic_settings_doze">
             <intent
-                android:targetPackage="com.moto.actions"
-                android:targetClass="com.moto.actions.DozeSettingsActivity" />
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.DozeSettingsActivity" />
     </Preference>
 
     <Preference
@@ -44,8 +44,8 @@
         android:summary="@string/fingerprint_gestures_manage_summary"
         android:icon="@drawable/ic_settings_fingerprint">
             <intent
-                android:targetPackage="com.moto.actions"
-                android:targetClass="com.moto.actions.FPGestureSettingsActivity" />
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.FPGestureSettingsActivity" />
     </Preference>
 
     <Preference
@@ -54,8 +54,8 @@
         android:summary="@string/screen_off_gestures_manage_summary"
         android:icon="@drawable/ic_settings_screen_off_gestures">
             <intent
-                android:targetPackage="com.moto.actions"
-                android:targetClass="com.moto.actions.ScreenOffGestureSettingsActivity" />
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.ScreenOffGestureSettingsActivity" />
     </Preference>
 
 </PreferenceScreen>

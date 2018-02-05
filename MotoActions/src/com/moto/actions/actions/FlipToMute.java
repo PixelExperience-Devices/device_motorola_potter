@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.moto.actions.actions;
+package com.dirtyunicorns.settings.device.actions;
 
 import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
@@ -27,8 +27,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import com.moto.actions.MotoActionsSettings;
-import com.moto.actions.SensorHelper;
+import com.dirtyunicorns.settings.device.MotoActionsSettings;
+import com.dirtyunicorns.settings.device.SensorHelper;
 
 public class FlipToMute implements UpdatedStateNotifier {
     private static final String TAG = "MotoActions-FlipToMute";
