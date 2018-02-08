@@ -3,19 +3,13 @@
     "remote": "github",
     "repository":  "GZR-Kernels/Optimus_Drunk_Potter",
     "target_path": "kernel/motorola/msm8953",
-    "branch": "8.1-64b"
+    "branch": "8.1-64"
   },
   {
     "remote": "github",
     "repository": "boulzordev/android_vendor_motorola_potter",
     "target_path": "vendor/motorola/potter",
     "branch": "lineage-15.1-64"
-  },
-  {
-    "remote": "github",
-    "repository": "LineageOS/android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings",
-    "branch": "lineage-15.0"
   }
 ]
 
