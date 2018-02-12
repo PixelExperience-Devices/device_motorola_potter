@@ -44,7 +44,7 @@ on post-fs
     mkdir /persist/wmdrm 0775 oem_5003 oem_5003
     mkdir /persist/public/usc_dm 0775 radio radio
     mkdir /persist/sds 0700 vold vold
-    mkdir /persist/rfs/msm/mpss/mot_rfs 0771 rfs system
+    mkdir /persist/rfs/msm/mpss/mot_rfs 0771 oem_2951 system
 
     # This dir is used to store any OMA(both DM and CP) files in persist partition
     # Any app with radio UID or oem_5004 GID can read/write/execute files in this dir.
