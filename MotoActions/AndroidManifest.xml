@@ -58,13 +58,9 @@
         </activity>
 
         <activity
-            android:name=".ActionsPreferenceActivity"
+            android:name=".TouchscreenGestureSettings"
             android:label="@string/moto_actions_title"
-            android:summary="@string/device_gestures_summary"
             android:theme="@style/MotoActions">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
         </activity>
 
         <activity

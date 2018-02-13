@@ -20,7 +20,7 @@ import android.os.Bundle;
 
 import android.preference.PreferenceActivity;
 
-public class ActionsPreferenceActivity extends PreferenceActivity {
+public class TouchscreenGestureSettings extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

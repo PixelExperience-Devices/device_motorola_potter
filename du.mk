@@ -17,12 +17,11 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/moto/potter/full_potter.mk)
 
-# Inherit some common EV stuff.
+# Inherit some common DU stuff.
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
-# Boot animation
+# TWRP theme
 TW_THEME := portrait_hdpi
-BOOT_ANIMATION_SIZE := 1080p
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
@@ -36,9 +35,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=motorola/potter/potter:7.0/NPN25.137-67/75:user/release-keys \
     PRIVATE_BUILD_DESC="potter-7.0/NPN25.137-67/75:user/release-keys" \
     PRODUCT_NAME="Moto G5 Plus"
-
-# Set up the product codename, build version & MOTD.
-PRODUCT_CODENAME := Motus
-PRODUCT_VERSION_DEVICE_SPECIFIC := p1
-
-PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Motorola G5 Plus\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
