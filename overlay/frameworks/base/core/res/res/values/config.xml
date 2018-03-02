@@ -297,7 +297,7 @@
     <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
 
     <!-- Names of the key handler classes -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.dirtyunicorns.settings.device.KeyHandler</string>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
