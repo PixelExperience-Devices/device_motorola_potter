@@ -211,6 +211,7 @@ on boot
 
     # FPC home button permissions
     chown system system /sys/homebutton/enable
+    chown system system /sys/homebutton/enable_off
     chown system system /sys/homebutton/haptic
     chown system system /sys/homebutton/haptic_off
     chown system system /sys/homebutton/key
@@ -223,6 +224,7 @@ on boot
     chown system system /sys/homebutton/key_screenoff_dbltap
     chown system system /sys/homebutton/key_screenoff_left
     chown system system /sys/homebutton/key_screenoff_right
+    chown system system /sys/homebutton/proximity_check_off
 
     # Screen off Gestures
     chown system radio /sys/android_touch/doubletap2wake
