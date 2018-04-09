@@ -126,9 +126,6 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
-# CNE / DPM
-BOARD_USES_QCNE := true
-
 # Compatability
 TARGET_NEEDS_HIDL_BASE_STUB := true
 
