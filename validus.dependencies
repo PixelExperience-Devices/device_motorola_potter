@@ -10,6 +10,12 @@
     "repository": "boulzordev/android_vendor_motorola_potter",
     "target_path": "vendor/motorola/potter",
     "branch": "lineage-15.1-64"
+  },
+  {
+    "repository": "jhenrique09/prebuilts_clang_host_linux-x86_7.0-DragonTC",
+    "target_path": "prebuilts/clang/host/linux-x86/7.0-DragonTC",
+    "branch": "master",
+    "remote": "github"
   }
 ]
 
