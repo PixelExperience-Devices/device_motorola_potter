@@ -27,6 +27,8 @@ import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
 import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_HAPTIC_FEEDBACK;
 import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_PROXIMITY_SENSOR;
 
+import com.moto.actions.utils.ProximityUtils;
+
 public class ScreenOffGestureSettingsFragment extends PreferenceFragment {
 
     private SwitchPreference mTapToWake;
@@ -74,6 +76,11 @@ public class ScreenOffGestureSettingsFragment extends PreferenceFragment {
                 return true;
             }
         });
+
+        if (!ProximityUtils.isProximityWakeEnabled(getActivity()) && mProximitySensor != null){
+            getPreferenceScreen().removePreference(mProximitySensor);
+            mProximitySensor = null;
+        }
     }
 
 }
