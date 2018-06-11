@@ -199,7 +199,8 @@ PRODUCT_PACKAGES += \
     libqsap_shim
 
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
 
 # health
 PRODUCT_PACKAGES += \
