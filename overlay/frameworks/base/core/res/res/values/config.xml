@@ -487,6 +487,9 @@
     <!-- Whether navigation bar can be disabled (for devices with hardware keys) -->
     <bool name="config_canDisableNavigationBar">true</bool>
 
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
