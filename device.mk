@@ -376,8 +376,7 @@ PRODUCT_PACKAGES += \
     sensors.msm8953 \
     sensors.rp \
     sensors.tof \
-    sensors.tof.vl53l0 \
-    libsensorndkbridge
+    sensors.tof.vl53l0
 
 # Shims
 PRODUCT_PACKAGES += \
