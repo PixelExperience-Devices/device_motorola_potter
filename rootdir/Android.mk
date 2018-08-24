@@ -65,3 +65,10 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES :=
 LOCAL_SHARED_LIBRARIES := libhidltransport
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := android.hidl.manager@1.0
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES :=
+LOCAL_SHARED_LIBRARIES := libhidltransport
+include $(BUILD_SHARED_LIBRARY)
