@@ -207,6 +207,9 @@ LZMA_RAMDISK_TARGETS := recovery
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-08-01
+
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
