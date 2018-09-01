@@ -214,6 +214,9 @@ LZMA_RAMDISK_TARGETS := recovery
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
+# RIL
+TARGET_RIL_VARIANT := caf
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-09-01
 
