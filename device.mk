@@ -199,8 +199,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
     android.hardware.gnss@1.0-service-qti \
     libqsap_sdk \
-    libqsap_shim \
-    libgnss_shim
+    libqsap_shim
 
 # health
 PRODUCT_PACKAGES += \
