@@ -13,4 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
  PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/gzosp_potter.mk
+	$(LOCAL_DIR)/aosp_potter.mk
