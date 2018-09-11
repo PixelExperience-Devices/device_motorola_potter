@@ -228,7 +228,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/adspd|libshim_adsp.so \
     /system/vendor/lib64/libmdmcutback.so|libqsap_shim.so \
-    /system/vendor/lib/libmot_gpu_mapper.so|libgpu_mapper_shim.so \
     /system/lib/libjustshoot.so|libjustshoot_shim.so
 
 # VNDK
