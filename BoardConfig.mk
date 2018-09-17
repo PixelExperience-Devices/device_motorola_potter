@@ -203,7 +203,7 @@ BOARD_ROOT_EXTRA_FOLDERS := dsp firmware fsg persist
 TARGET_PER_MGR_ENABLED := true
 
 # Power
-TARGET_HAS_NO_WIFI_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
 
 # QC flags
 BOARD_USES_QCOM_HARDWARE := true
