@@ -2,26 +2,26 @@
  {
     "repository": "DirtyUnicorns/android_kernel_moto_msm8953",
     "target_path": "kernel/moto/msm8953",
-    "branch" : "o8x-caf"
+    "branch" : "p9x-caf"
  },
  {
     "repository": "DirtyUnicorns/android_hardware_qcom_fm",
     "target_path": "hardware/qcom/fm",
-    "branch" : "o8x-caf"
+    "branch" : "p9x-caf"
  },
  {
     "repository": "DirtyUnicorns/android_packages_apps_FMRadio",
     "target_path": "packages/apps/FMRadio",
-    "branch" : "o8x-caf"
+    "branch" : "p9x-caf"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_motorola",
     "target_path": "vendor/motorola",
-    "branch" : "o8x-caf"
+    "branch" : "p9x-caf"
  },
  {
     "repository": "DirtyUnicorns/android_system_qcom",
     "target_path": "system/qcom",
-    "branch" : "o8x-caf"
+    "branch" : "p9x-caf"
  }
 ]
