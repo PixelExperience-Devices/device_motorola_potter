@@ -15,7 +15,7 @@
     "remote": "github",
     "repository": "PixelExperience/packages_resources_MotoActions",
     "target_path": "packages/resources/MotoActions",
-    "branch": "oreo-mr1"
+    "branch": "pie"
   }
 ]
 
