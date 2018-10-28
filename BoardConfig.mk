@@ -163,6 +163,9 @@ TARGET_EXFAT_DRIVER := exfat
 # FM
 BOARD_HAVE_QCOM_FM := true
 
+# Key disabler
+JAVA_SOURCE_OVERLAYS := org.pixelexperience.keydisabler|$(DEVICE_PATH)/keydisabler|**/*.java
+
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
