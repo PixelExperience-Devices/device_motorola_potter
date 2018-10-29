@@ -469,4 +469,11 @@
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
     <bool name="config_smart_battery_available">true</bool>
+
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">true</bool>
+
+    <!-- Whether device supports gestures on fingerprint sensor -->
+    <bool name="config_supportsGesturesOnFingerprintSensor">true</bool>
+
 </resources>
