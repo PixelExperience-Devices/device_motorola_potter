@@ -18,8 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -159,19 +158,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += android.hardware.media.omx
 
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-# DRM
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite
-
 # limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.dex2oat-threads=8 \
     dalvik.vm.image-dex2oat-threads=8
+
+# DRM
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -203,9 +198,22 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libqsap_shim
 
-# health
+# Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
+
+# IDC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
+
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    qti-telephony-common \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -224,9 +232,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
                     android.hardware.keymaster@3.0-impl \
                     android.hardware.keymaster@3.0-service
-# IDC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -263,14 +268,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/vendor/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/vendor/etc/media_codecs_google_video.xml
 
-# NFC
-PRODUCT_COPY_FILES += \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-nci.conf:system/vendor/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf
-
 # Netutils
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
@@ -278,13 +275,19 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
+# NFC
+PRODUCT_COPY_FILES += \
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    $(LOCAL_PATH)/configs/libnfc-nci.conf:system/vendor/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/vendor/etc/libnfc-nxp.conf
+
 PRODUCT_PACKAGES += \
     libnfc \
     NfcNci \
     Tag \
     com.android.nfc_extras \
     android.hardware.nfc@1.1-service \
-	SecureElement
+    SecureElement
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -301,6 +304,11 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
+
+# Powerhint configuration file
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml \
+     $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml
 
 # Qualcomm
 PRODUCT_COPY_FILES += \
@@ -331,38 +339,25 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-# Powerhint configuration file
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/configs/powerhint.xml:system/etc/powerhint.xml \
-     $(LOCAL_PATH)/configs/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml
-
 # Releasetools script
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/check_features.sh:system/vendor/bin/check_features.sh
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
     libprotobuf-cpp-full \
-    libxml2
-
-#RIL
-PRODUCT_PACKAGES += \
+    libxml2 \
     android.hardware.radio@1.0
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:system/vendor/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:system/vendor/etc/seccomp_policy/mediaextractor.policy
-
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    qti-telephony-common \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -383,20 +378,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqsap_shim
 
-# Telephony
+# TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+    textclassifier.bundle1
 
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-potter.conf:system/vendor/etc/thermal-engine.conf
 
-# TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
-    textclassifier.bundle1
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    thermal.msm8953
 
 # USB
 PRODUCT_PACKAGES += \
@@ -407,6 +400,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
+# VNDK
 PRODUCT_PACKAGES += \
     vndk-sp
 
@@ -420,21 +414,13 @@ PRODUCT_PACKAGES += \
     wificond \
     wifilogd \
     wpa_supplicant \
-    wpa_supplicant.conf
-
-#Thermal
-PRODUCT_PACKAGES += android.hardware.thermal@1.0-impl \
-                    android.hardware.thermal@1.0-service \
-                    thermal.msm8953
-
-PRODUCT_PACKAGES += \
+    wpa_supplicant.conf \
     libcurl \
     libQWiFiSoftApCfg \
     wificond \
     wifilogd \
     tcpdump \
-    wcnss_service \
-    libwpa_client
+    wcnss_service
 
 # Wifi Symlinks
 PRODUCT_PACKAGES += \
@@ -464,5 +450,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
-PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
