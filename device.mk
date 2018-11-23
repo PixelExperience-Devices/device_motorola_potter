@@ -332,6 +332,7 @@ PRODUCT_PACKAGES += \
     init.mmi.rc \
     init.mmi.usb.rc \
     init.qcom.rc \
+    init.qcom.ril.sh \
     init.safailnet.rc
 
 PRODUCT_COPY_FILES += \
