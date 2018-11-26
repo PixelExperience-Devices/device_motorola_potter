@@ -1,7 +1,7 @@
 include $(CLEAR_VARS)
 LOCAL_MODULE := GoogleCameraMod
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := GoogleCameraMod/GoogleCamera_5.2.025-Final_fu24-16d.apk
+LOCAL_SRC_FILES := GoogleCameraMod/MGC_6.1.021_Potter_v4F-san1ty-final.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
