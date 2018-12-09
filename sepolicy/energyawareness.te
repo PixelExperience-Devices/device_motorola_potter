@@ -1,2 +1,3 @@
 allow energyawareness sysfs_uio:file r_file_perms;
 allow energyawareness sysfs_rmt_storage:file r_file_perms;
+allow fsck_untrusted self:capability sys_admin;

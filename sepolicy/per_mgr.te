@@ -1,1 +1,5 @@
+
 #allow vendor_per_mgr self:capability net_raw;
+
+allow per_mgr self:capability net_raw;
+allow vendor_per_mgr servicemanager:binder {call transfer};

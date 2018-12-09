@@ -22,3 +22,10 @@ get_prop(system_server, vendor_alarm_boot_prop)
 # Screen off gestures
 allow system_server sysfs_screen_off_gestures:dir search;
 allow system_server sysfs_screen_off_gestures:file rw_file_perms;
+
+
+get_prop(system_server, alarm_boot_prop)
+
+####################################################
+allow system_server mm-qcamerad:binder call;
+allow system_server vendor_camera_prop:file {open getattr read};

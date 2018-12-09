@@ -43,3 +43,6 @@ allow servicemanager sensors:dir search;
 allow servicemanager sensors:file { open read };
 allow servicemanager sensors:process getattr;
 
+allow servicemanager vendor_per_mgr:dir {search read};
+allow servicemanager vendor_per_mgr:file {open read};
+allow servicemanager vendor_per_mgr:process getattr;

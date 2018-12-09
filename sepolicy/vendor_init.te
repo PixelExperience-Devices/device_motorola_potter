@@ -1,0 +1,8 @@
+allow vendor_init system_data_file:dir { add_name create setattr write };
+allow vendor_init media_rw_data_file:dir {getattr setattr};
+allow vendor_init rootfs:dir {write add_name};
+allow vendor_init camera_data_file:dir {create setattr};
+allow vendor_init radio_data_file:dir search;
+allow vendor_init tombstone_data_file:dir {write search add_name create setattr};
+allow vendor_init radio_data_file:file {open read getattr};
+allow vendor_init media_rw_data_file:file {relabelfrom getattr};
