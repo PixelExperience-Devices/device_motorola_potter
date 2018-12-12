@@ -57,3 +57,5 @@ allow init hidl_base_hwservice:hwservice_manager add;
 
 # Screen off gestures
 allow init sysfs_screen_off_gestures:file { rw_file_perms setattr };
+
+allow init fingerprintd_data_file:file rename;
