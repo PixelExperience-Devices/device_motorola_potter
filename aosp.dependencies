@@ -12,8 +12,8 @@
     "branch": "9.0"
   },
   {
-    "remote": "github",
-    "repository": "PixelExperience/packages_resources_MotoActions",
+    "remote": "pixel",
+    "repository": "packages_resources_MotoActions",
     "target_path": "packages/resources/MotoActions",
     "branch": "pie"
   }

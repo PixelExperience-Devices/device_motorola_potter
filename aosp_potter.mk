@@ -22,11 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 # Inherit from potter device
 $(call inherit-product, device/motorola/potter/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
-
-# Boot animation res
+# Inherit some common PixelExperience stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
