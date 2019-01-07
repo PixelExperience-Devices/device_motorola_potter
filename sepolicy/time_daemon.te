@@ -6,3 +6,4 @@ allow time_daemon sysfs:file {open read};
 allow time_daemon self:capability sys_admin;
 allow time_daemon time_data_file:dir search;
 allow time_daemon time_data_file:file { read write open };
+

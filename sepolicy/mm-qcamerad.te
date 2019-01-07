@@ -42,3 +42,5 @@ allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 allow mm-qcamerad persist_camera_file:file {read open getattr};
 allow mm-qcamerad persist_camera_file:dir search;
 
+allow mm-qcamerad camera_data_file:dir search;
+allow mm-qcamerad sysfs:file { open read };

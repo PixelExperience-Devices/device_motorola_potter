@@ -1,3 +1,2 @@
 allow audioserver sysfs:dir {open read};
-allow audioserver vendor_data_file:dir {add_name write create};
-allow audioserver vendor_data_file:file {read append create open getattr};
+allow audioserver vendor_data_file:file { append getattr open read };

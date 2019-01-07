@@ -67,3 +67,9 @@ allow init ion_device:chr_file ioctl;
 allow init uhid_device:chr_file {ioctl write};
 
 allow init hal_perf_default:binder call;
+
+allow init debugfs:dir mounton;
+allow init persist_file:dir mounton;
+allow init sysfs:file { setattr };
+allow init sysfs_battery_supply:lnk_file {open read };
+allow init sysfs_fpc:file { rw_file_perms setattr };

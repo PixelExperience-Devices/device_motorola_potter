@@ -1,1 +1,1 @@
-allow vendor_ssr_setup self:capability sys_admin;
+allow vendor_ssr_setup sysfs:file read;
