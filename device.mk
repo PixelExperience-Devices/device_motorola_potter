@@ -104,8 +104,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
-    libgpu_mapper_shim \
-    libjustshoot_shim
+    libjustshoot_shim \
+    libshim_buffer
 
 # CarrierConfig
 PRODUCT_PACKAGES += \
