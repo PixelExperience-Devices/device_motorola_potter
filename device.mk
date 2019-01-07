@@ -220,6 +220,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/vendor/etc/sec_config
@@ -429,6 +434,10 @@ PRODUCT_PACKAGES += \
     tcpdump \
     wcnss_service
 
+# Wi-Fi Display
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
 # Wifi Symlinks
 PRODUCT_PACKAGES += \
     WCNSS_qcom_cfg.ini \
@@ -453,10 +462,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-
-# Wi-Fi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
