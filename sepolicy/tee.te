@@ -2,4 +2,6 @@ allow tee fingerprintd_data_file:file { read open };
 allow tee system_prop:property_service set;
 allow tee persist_file:file r_file_perms;
 allow tee system_data_file:dir {read open};
-allow tee fingerprintd_data_file:dir read;
+allow tee fingerprintd_data_file:dir create_dir_perms;
+allow tee fingerprintd_data_file:file create_file_perms;
+allow tee system_data_file:dir r_dir_perms;
