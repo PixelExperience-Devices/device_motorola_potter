@@ -18,7 +18,6 @@ allow rild rild_exec:file execute_no_trans;
 
 allow rild fwk_sensor_hwservice:hwservice_manager find;
 
-
 allow rild shell_exec:file {read open execute};
 allow rild proc:file {open read};
 allow rild mnt_vendor_file:dir search;
@@ -27,3 +26,4 @@ allow rild unlabeled:dir {search read getattr open};
 allow rild persist_modem_file:file {read write open};
 allow rild unlabeled:file {open read getattr};
 allow rild unlabeled:lnk_file read;
+set_prop(rild, vendor_radio_prop);
