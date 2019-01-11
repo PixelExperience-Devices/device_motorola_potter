@@ -10,3 +10,4 @@ allow netmgrd property_socket:sock_file write;
 allow netmgrd sysfs:file {open read};
 allow netmgrd init:unix_stream_socket connectto;
 allow netmgrd self:capability sys_admin;
+allow netmgrd vendor_xlat_prop:property_service set;

@@ -40,4 +40,5 @@ binder_call(mm-qcamerad, system_server)
 
 allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 allow mm-qcamerad persist_camera_file:file {read open getattr};
+allow mm-qcamerad persist_camera_file:dir search;
 
