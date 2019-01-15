@@ -1,1 +1,0 @@
-allow blkid_untrusted self:capability sys_admin;

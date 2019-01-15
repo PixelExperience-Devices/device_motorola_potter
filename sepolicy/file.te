@@ -59,12 +59,3 @@ type proc_touchpanel, fs_type;
 # Screen off gestures
 type sysfs_screen_off_gestures, fs_type, sysfs_type, mlstrustedobject;
 
-# mm-qcamera-daemon socket
-type camera_socket, file_type, data_file_type;
-
-type sysfs_msm_subsys, sysfs_type, fs_type;
-type per_mgr, domain;
-type qemu_hw_mainkeys_prop, file_type;
-type alarm_boot_prop, property_type; 
-type rmnet_mux_prop, property_type;
-type sensors_data_file, file_type, data_file_type;
