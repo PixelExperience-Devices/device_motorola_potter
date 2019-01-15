@@ -1,7 +1,3 @@
-type_transition mm-qcamerad camera_data_file:sock_file camera_socket "cam_socket1";
-type_transition mm-qcamerad camera_data_file:sock_file camera_socket "cam_socket2";
-allow mm-qcamerad camera_socket:sock_file { create unlink write };
-
 binder_call(mm-qcamerad, servicemanager);
 binder_use(mm-qcamerad);
 binder_call(mm-qcamerad, binderservicedomain);
@@ -31,16 +27,10 @@ allow mm-qcamerad hal_sensors_default:unix_stream_socket { read write };
 
 allow mm-qcamerad hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
 allow mm-qcamerad hal_configstore_default:binder call;
-allow mm-qcamerad sysfs:file {open read};
-allow mm-qcamerad camera_data_file:dir search;
 
 #allow camera to access Isensormanager
 allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 binder_call(mm-qcamerad, system_server)
-
-allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
-allow mm-qcamerad persist_camera_file:file {read open getattr};
-allow mm-qcamerad persist_camera_file:dir search;
 
 allow mm-qcamerad camera_data_file:dir search;
 allow mm-qcamerad sysfs:file { open read };

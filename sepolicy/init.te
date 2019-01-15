@@ -52,22 +52,6 @@ allow init hidl_base_hwservice:hwservice_manager add;
 # Screen off gestures
 allow init sysfs_screen_off_gestures:file { rw_file_perms setattr };
 
-allow init fingerprintd_data_file:file rename;
-
-allow init sysfs_battery_supply:lnk_file read;
-allow init sysfs_battery_supply:file {read open};
-allow init sysfs_usb_supply:file {read open};
-allow init hwservicemanager:binder {transfer call};
-allow init wcnss_device:chr_file {open read write};
-allow init proc:file {open write};
-allow init sysfs_capsense:file setattr;
-allow init sysfs_fpc:file {open read write setattr};
-allow init tee_device:chr_file read;
-allow init ion_device:chr_file ioctl;
-allow init uhid_device:chr_file {ioctl write};
-
-allow init hal_perf_default:binder call;
-
 allow init debugfs:dir mounton;
 allow init persist_file:dir mounton;
 allow init sysfs:file { setattr };
