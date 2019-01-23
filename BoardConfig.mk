@@ -237,6 +237,8 @@ MOT_SENSOR_HUB_FEATURE_LA := true
 MOT_SENSOR_HUB_FEATURE_GR := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/adspd|libshim_adsp.so \
