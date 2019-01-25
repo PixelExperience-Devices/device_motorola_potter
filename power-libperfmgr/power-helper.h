@@ -34,6 +34,10 @@
 extern "C" {
 #endif
 
+typedef enum {
+    POWER_FEATURE_DOUBLE_TAP_TO_WAKE = 0x00000001
+} feature_t;
+
 enum stats_type {
     //Platform Stats
     RPM_MODE_XO = 0,
@@ -93,6 +97,8 @@ struct stat_pair {
     size_t num_parameters;
 };
 
+int sysfs_write(char *path, char *s);
+void set_feature(feature_t feature, int state);
 int extract_platform_stats(uint64_t *list);
 #ifndef NO_WLAN_STATS
 int extract_wlan_stats(uint64_t *list);
