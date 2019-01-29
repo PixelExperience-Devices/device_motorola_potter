@@ -68,22 +68,6 @@ public class MotoActionsSettings {
         return mChopChopEnabled;
     }
 
-    public static boolean isDozeEnabled(ContentResolver contentResolver) {
-        return (Settings.Secure.getInt(contentResolver, Settings.Secure.DOZE_ENABLED, 1) != 0);
-    }
-
-    public boolean isDozeEnabled() {
-        return isDozeEnabled(mContext.getContentResolver());
-    }
-
-    public boolean isIrWakeupEnabled() {
-        return isDozeEnabled() && mIrWakeUpEnabled;
-    }
-
-    public boolean isPickUpEnabled() {
-        return isDozeEnabled() && mPickUpGestureEnabled;
-    }
-
     public boolean isIrSilencerEnabled() {
         return mIrSilencerEnabled;
     }

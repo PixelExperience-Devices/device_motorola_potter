@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dirtyunicorns.settings.device"
-    android:sharedUserId="android.uid.system"
-    >
+    android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-
-    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
         android:minSdkVersion="27"
@@ -46,16 +43,6 @@
                 <action android:name="ServiceWrapper"/>
             </intent-filter>
         </service>
-
-        <activity
-            android:name=".DozeSettingsActivity"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/MotoActions">
-            <intent-filter>
-                <action android:name="com.dirtyunicorns.settings.device.DOZE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".TouchscreenGestureSettings"

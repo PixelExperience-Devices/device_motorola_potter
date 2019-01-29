@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- Title and summary -->
     <string name="moto_actions_title">Device extras</string>
 
@@ -82,26 +83,26 @@
     <string name="screen_off_gestures_swipe_down_title">Swipe down</string>
     <string name="screen_off_gestures_swipe_down_dlg_title">Select action for swipe down</string>
 
-   <!-- Double tap to wake -->
-   <string name="tap_to_wake">Tap to wake</string>
-   <string name="tap_to_wake_summary">Double-tap anywhere on the screen to wake device</string>
+    <!-- Double tap to wake -->
+    <string name="tap_to_wake">Tap to wake</string>
+    <string name="tap_to_wake_summary">Double-tap anywhere on the screen to wake device</string>
 
-   <!-- Screen off gestures haptic feedback -->
-   <string name="haptic_feedback">Haptic feedback</string>
-   <string name="haptic_feedback_summary">Vibrate when a touchscreen gesture is detected</string>
-   
-   <!-- Pip -->
-   <string name="app_does_not_support_pip">App does not support picture-in-picture mode.</string>
+    <!-- Screen off gestures haptic feedback -->
+    <string name="haptic_feedback">Haptic feedback</string>
+    <string name="haptic_feedback_summary">Vibrate when a touchscreen gesture is detected</string>
 
-   <!-- Proximity sensor -->
-   <string name="allow_proximity_sensor_title">Allow proximity sensor</string>
-   <string name="allow_proximity_sensor_summary">Check the proximity sensor before performing the action</string>
+    <!-- Pip -->
+    <string name="app_does_not_support_pip">App does not support picture-in-picture mode.</string>
 
-   <!-- DeviceSettings Import -->
-   <string name="switch_bar_on">On</string>
-   <string name="switch_bar_off">Off</string>
-   
-   <!-- Device actions -->
+    <!-- Proximity sensor -->
+    <string name="allow_proximity_sensor_title">Allow proximity sensor</string>
+    <string name="allow_proximity_sensor_summary">Check the proximity sensor before performing the action</string>
+
+    <!-- DeviceSettings Import -->
+    <string name="switch_bar_on">On</string>
+    <string name="switch_bar_off">Off</string>
+
+    <!-- Device actions -->
     <string name="actions_title">Actions</string>
 
     <!-- Camera gesture -->
@@ -146,13 +147,4 @@
     <string name="proximity_wake_enable_title">Proximity wake</string>
     <string name="proximity_wake_enable_summary">Wake device on hand wave</string>
 
-    <!-- Ambient Display -->
-    <string name="ambient_display_title">Ambient display</string>
-    <string name="ambient_display_enable_title">Ambient display</string>
-    <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
-    <string name="ambient_display_gestures_title">Ambient display gestures</string>
-    <string name="ambient_display_gestures_summary">Additional gestures to wake the screen</string>
-    <string name="ambient_display_summary">Wake screen when you receive notifications</string>
-    <string name="ambient_display_summary_on">Screen will wake when you receive notifications</string>
-    <string name="ambient_display_summary_off">Screen will not wake when you receive notifications</string>
 </resources>

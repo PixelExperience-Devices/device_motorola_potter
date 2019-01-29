@@ -34,8 +34,6 @@ import com.dirtyunicorns.settings.device.actions.FlipToMute;
 import com.dirtyunicorns.settings.device.actions.LiftToSilence;
 import com.dirtyunicorns.settings.device.actions.ProximitySilencer;
 
-import com.dirtyunicorns.settings.device.doze.DozePulseAction;
-import com.dirtyunicorns.settings.device.doze.GlanceSensor;
 import com.dirtyunicorns.settings.device.doze.ProximitySensor;
 import com.dirtyunicorns.settings.device.doze.ScreenReceiver;
 import com.dirtyunicorns.settings.device.doze.ScreenStateNotifier;
@@ -47,7 +45,6 @@ public class MotoActionsService extends IntentService implements ScreenStateNoti
 
     private final Context mContext;
 
-    private final DozePulseAction mDozePulseAction;
     private final PowerManager mPowerManager;
     private final PowerManager.WakeLock mWakeLock;
     private final ScreenReceiver mScreenReceiver;
@@ -66,14 +63,6 @@ public class MotoActionsService extends IntentService implements ScreenStateNoti
         MotoActionsSettings motoActionsSettings = new MotoActionsSettings(context, this);
         mSensorHelper = new SensorHelper(context);
         mScreenReceiver = new ScreenReceiver(context, this);
-
-        mDozePulseAction = new DozePulseAction(context);
-        mScreenStateNotifiers.add(mDozePulseAction);
-
-        // Actionable sensors get screen on/off notifications
-        mScreenStateNotifiers.add(new GlanceSensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
-        mScreenStateNotifiers.add(new ProximitySensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
-        mScreenStateNotifiers.add(new StowSensor(motoActionsSettings, mSensorHelper, mDozePulseAction));
 
         // Other actions that are always enabled
         mUpdatedStateNotifiers.add(new CameraActivationSensor(motoActionsSettings, mSensorHelper));

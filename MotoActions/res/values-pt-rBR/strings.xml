@@ -16,6 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- Title and summary -->
     <string name="moto_actions_title">Moto Ações</string>
 
@@ -89,11 +90,12 @@
    <!-- Screen off gestures haptic feedback -->
    <string name="haptic_feedback">Retorno tátil</string>
    <string name="haptic_feedback_summary">Vibrar quando um gesto for detectado</string>
-   
+
    <!-- Pip -->
    <string name="app_does_not_support_pip">O aplicativo não tem suporte ao modo picture-in-picture.</string>
 
    <!-- Proximity sensor -->
    <string name="allow_proximity_sensor_title">Habilitar o sensor de proximidade</string>
    <string name="allow_proximity_sensor_summary">Verificar o sensor de proximidade antes de executar a ação</string>
+
 </resources>
