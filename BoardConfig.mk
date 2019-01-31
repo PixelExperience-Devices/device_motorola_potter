@@ -62,6 +62,7 @@ TARGET_OTA_ASSERT_DEVICE := potter,potter_retail
 # Enable dexpreopt to speed boot time
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 WITH_DEXPREOPT := true
+TARGET_FLATTEN_APEX := true
 
 # GPS
 TARGET_NO_RPC := true
