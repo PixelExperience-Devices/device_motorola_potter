@@ -926,13 +926,11 @@ on property:service.bootanim.exit=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
 
     write /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us 18000
+    write /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpufreq/schedutil/iowait_boost_enable 0
 
-    # Enable input boost configuration
-    write /sys/module/cpu_input_boost/parameters/input_boost_freq "0:1036800"
-    write /sys/module/cpu_input_boost/parameters/input_boost_duration 128
-    write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 4
+    # Enable dynamic stune boost configuration
+    write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5
 
     # re-enable thermal & BCL core_control now
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -982,7 +980,7 @@ on property:service.bootanim.exit=1
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
     write /sys/module/process_reclaim/parameters/pressure_min 50
     write /sys/module/process_reclaim/parameters/per_swap_size 512
-    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,36864,46080"
+    write /sys/module/lowmemorykiller/parameters/minfree "15360,19200,23040,26880,34415,43737"
 
     #Reset the "read ahead" setting for system patition
     # result: ext4: 32KB, dm_verity:64KB, block layer: 128KB
