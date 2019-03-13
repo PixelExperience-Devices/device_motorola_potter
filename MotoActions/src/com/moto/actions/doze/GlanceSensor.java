@@ -1,5 +1,4 @@
 /*
- * Copyright (c) 2015 The CyanogenMod Project
  * Copyright (c) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,16 +17,16 @@
 package com.dirtyunicorns.settings.device.doze;
 
 import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
+import android.hardware.TriggerEvent;
+import android.hardware.TriggerEventListener;
 import android.util.Log;
 
 import com.dirtyunicorns.settings.device.MotoActionsSettings;
 import com.dirtyunicorns.settings.device.SensorAction;
 import com.dirtyunicorns.settings.device.SensorHelper;
 
-public class ProximitySensor implements ScreenStateNotifier, SensorEventListener {
-    private static final String TAG = "MotoActions-ProximitySensor";
+public class GlanceSensor implements ScreenStateNotifier {
+    private static final String TAG = "MotoActions-GlanceSensor";
 
     private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
@@ -36,46 +35,39 @@ public class ProximitySensor implements ScreenStateNotifier, SensorEventListener
 
     private boolean mEnabled;
 
-    private boolean mSawNear = false;
-
-    public ProximitySensor(MotoActionsSettings motoActionsSettings, SensorHelper sensorHelper,
+    public GlanceSensor(MotoActionsSettings motoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
         mMotoActionsSettings = motoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
-        mSensor = sensorHelper.getProximitySensor();
+        mSensor = sensorHelper.getGlanceSensor();
     }
 
     @Override
     public void screenTurnedOn() {
         if (mEnabled) {
             Log.d(TAG, "Disabling");
-            mSensorHelper.unregisterListener(this);
+            mSensorHelper.cancelTriggerSensor(mSensor, mGlanceListener);
             mEnabled = false;
         }
     }
 
     @Override
     public void screenTurnedOff() {
-        if (mMotoActionsSettings.isIrWakeupEnabled() && !mEnabled) {
+        if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
-            mSensorHelper.registerListener(mSensor, this);
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
             mEnabled = true;
         }
     }
 
-    @Override
-    public void onSensorChanged(SensorEvent event) {
-        boolean isNear = event.values[0] < mSensor.getMaximumRange();
-        if (mSawNear && !isNear) {
-            Log.d(TAG, "wave triggered");
+    private TriggerEventListener mGlanceListener = new TriggerEventListener() {
+        @Override
+        public void onTrigger(TriggerEvent event) {
+            Log.d(TAG, "triggered");
             mSensorAction.action();
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
         }
-        mSawNear = isNear;
-    }
-
-    @Override
-    public void onAccuracyChanged(Sensor mSensor, int accuracy) {
-    }
+    };
 }

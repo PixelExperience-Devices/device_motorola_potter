@@ -14,7 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Title and summary -->
     <string name="moto_actions_title">Réglages spécifiques</string>
 
@@ -82,26 +81,26 @@
     <string name="screen_off_gestures_swipe_down_title">Glissement vers le bas</string>
     <string name="screen_off_gestures_swipe_down_dlg_title">Sélectionner une action</string>
 
-    <!-- Double tap to wake -->
-    <string name="tap_to_wake">Réveiller l\'appareil</string>
-    <string name="tap_to_wake_summary">Double appui pour réveiller l\'appareil</string>
+   <!-- Double tap to wake -->
+   <string name="tap_to_wake">Réveiller l\'appareil</string>
+   <string name="tap_to_wake_summary">Double appui pour réveiller l\'appareil</string>
 
-    <!-- Screen off gestures haptic feedback -->
-    <string name="haptic_feedback">Retour haptique</string>
-    <string name="haptic_feedback_summary">Vibrer lors de la détection de geste</string>
+   <!-- Screen off gestures haptic feedback -->
+   <string name="haptic_feedback">Retour haptique</string>
+   <string name="haptic_feedback_summary">Vibrer lors de la détection de geste</string>
 
-    <!-- Pip -->
-    <string name="app_does_not_support_pip">L\'application ne prend pas en charge le mode Incrustation d\'image</string>
+   <!-- Pip -->
+   <string name="app_does_not_support_pip">L\'application ne prend pas en charge le mode Incrustation d\'image</string>
 
-    <!-- Proximity sensor -->
-    <string name="allow_proximity_sensor_title">Capteur de proximité</string>
-    <string name="allow_proximity_sensor_summary">Contrôler l\'état du capteur de proximité avant d\'effectuer une action</string>
+   <!-- Proximity sensor -->
+   <string name="allow_proximity_sensor_title">Capteur de proximité</string>
+   <string name="allow_proximity_sensor_summary">Contrôler l\'état du capteur de proximité avant d\'effectuer une action</string>
 
-    <!-- DeviceSettings Import -->
-    <string name="switch_bar_on">Activé</string>
-    <string name="switch_bar_off">Désactivé</string>
+   <!-- DeviceSettings Import -->
+   <string name="switch_bar_on">Activé</string>
+   <string name="switch_bar_off">Désactivé</string>
 
-    <!-- Device actions -->
+   <!-- Device actions -->
     <string name="actions_title">Actions</string>
 
     <!-- Camera gesture -->
@@ -146,4 +145,13 @@
     <string name="proximity_wake_enable_title">Geste de la main</string>
     <string name="proximity_wake_enable_summary">Réveiller l\'appareil lors du passage de la main devant le téléphone</string>
 
+    <!-- Ambient Display -->
+    <string name="ambient_display_title">Affichage en mode Veille</string>
+    <string name="ambient_display_enable_title">Affichage en mode Veille</string>
+    <string name="ambient_display_enable_summary">Réveiller l\'appareil lors de la réception de notifications</string>
+    <string name="ambient_display_gestures_title">Gestes</string>
+    <string name="ambient_display_gestures_summary">Gestes supplémentaires pour réveiller l\'écran</string>
+    <string name="ambient_display_summary">Réveiller l\'appareil lors de la réception de notifications</string>
+    <string name="ambient_display_summary_on">Activé</string>
+    <string name="ambient_display_summary_off">Désactivé</string>
 </resources>

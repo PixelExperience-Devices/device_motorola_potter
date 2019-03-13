@@ -16,7 +16,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Title and summary -->
     <string name="moto_actions_title">Moto Ações</string>
 
@@ -93,5 +92,4 @@
    <!-- Proximity sensor -->
    <string name="allow_proximity_sensor_title">Habilitar o sensor de proximidade</string>
    <string name="allow_proximity_sensor_summary">Verificar o sensor de proximidade antes de executar a ação</string>
-
 </resources>
