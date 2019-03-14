@@ -652,7 +652,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
         final KeyEvent downEvent = new KeyEvent(now, now, KeyEvent.ACTION_DOWN,
                 keyCode, 0, 0, KeyCharacterMap.VIRTUAL_KEYBOARD, 0,
-                KeyEvent.FLAG_FROM_SYSTEM, InputDevice.SOURCE_CLASS_BUTTON);
+                KeyEvent.FLAG_FROM_SYSTEM, InputDevice.SOURCE_NAVIGATION_BAR);
         final KeyEvent upEvent = KeyEvent.changeAction(downEvent,
                 KeyEvent.ACTION_UP);
 
