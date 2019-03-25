@@ -858,7 +858,7 @@ on charger
 
 on property:service.bootanim.exit=1
     write /dev/kmsg "Boot completed "
-    setprop sys.io.scheduler maple
+    setprop sys.io.scheduler anxiety
 
     # Setup permission for powerHAL
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
