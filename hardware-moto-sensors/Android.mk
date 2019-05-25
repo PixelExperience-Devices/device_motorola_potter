@@ -126,8 +126,6 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
             $(SH_PATH)/HubSensors.cpp   \
             $(SH_PATH)/SensorList.cpp
 
-        LOCAL_HEADER_LIBRARIES += libhardware_headers
-
         ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L0), true)
             # Sensor HAL file for M0 hub (low-tier) products (athene, etc...)
             LOCAL_SRC_FILES += \
@@ -183,7 +181,8 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
         LOCAL_MODULE_RELATIVE_PATH := hw
         LOCAL_MODULE_TAGS := optional
         LOCAL_VENDOR_MODULE := true
-        LOCAL_SHARED_LIBRARIES += liblog libcutils libz libdl libutils
+        LOCAL_HEADER_LIBRARIES += libhardware_headers
+        LOCAL_SHARED_LIBRARIES += liblog libcutils libz libdl libutils libhardware
         LOCAL_CLANG := true
         LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
         LOCAL_CFLAGS += -Wno-gnu-designator -Wno-writable-strings
@@ -203,10 +202,9 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_SRC_FILES += $(UTILS_PATH)/sensor_time.cpp
 
     LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-    LOCAL_HEADER_LIBRARIES += libhardware_headers
     # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
     LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-
+    LOCAL_HEADER_LIBRARIES := libutils_headers libhardware_headers
     LOCAL_SHARED_LIBRARIES := libcutils libc libutils liblog
     LOCAL_VENDOR_MODULE := true
     LOCAL_MODULE := sensorhub.$(TARGET_BOARD_PLATFORM)
