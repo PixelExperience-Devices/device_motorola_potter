@@ -946,3 +946,6 @@ on property:service.bootanim.exit=1
     
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
+
+    # Set perfd properties
+    setprop vendor.post_boot.parsed 1
