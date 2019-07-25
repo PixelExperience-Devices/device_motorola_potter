@@ -17,7 +17,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     av.offload.enable=false \
     av.debug.disable.pers.cache=1 \
     persist.audio.endcall.delay=250 \
-    qcom.hw.aac.encoder=false
+    qcom.hw.aac.encoder=false \
+    vendor.audio.feature.incall_music.enable=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
