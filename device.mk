@@ -238,8 +238,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_vid_tianma_1080p_520.xml:system/vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_520.xml
 
 # MotoActions
-PRODUCT_PACKAGES += \
-    MotoActions
+#PRODUCT_PACKAGES += \
+#    MotoActions
 
 # Media
 PRODUCT_PACKAGES += \
