@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
+# APEX
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
