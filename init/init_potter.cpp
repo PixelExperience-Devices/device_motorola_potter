@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-
+#include <sys/sysinfo.h>
 #include <android-base/properties.h>
 #include "property_service.h"
 #include "vendor_init.h"
@@ -48,11 +48,18 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
+/* Get Ram size for different variants */
+void check_device()
 {
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
+    struct sysinfo sys;
+    sysinfo(&sys);
+    if (sys.totalram > 3072ull * 1024 * 1024) {
+        property_set("ro.boot.ram", "4GB");
+    } else if (sys.totalram > 2048ull * 1024 * 1024) {
+        property_set("ro.boot.ram", "3GB");
+    } else {
+        property_set("ro.boot.ram", "2GB");
+    }
 }
 
 void num_sims() {
@@ -101,4 +108,6 @@ void vendor_load_properties()
     if (sku == "XT1683") {
         property_set("ro.hw.dtv", "true");
     }
+
+    check_device();
 }
