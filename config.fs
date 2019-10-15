@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+[AID_VENDOR_QCOM_DIAG]
+value:2950
+
 [AID_VENDOR_RFS]
 value:2951
 
@@ -24,6 +27,12 @@ mode: 0755
 user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: BLOCK_SUSPEND
+
+[system/vendor/bin/cnss-daemon]
+mode: 0755
+user: AID_BLUETOOTH
+group: AID_BLUETOOTH
+caps: NET_BIND_SERVICE
 
 [system/vendor/bin/imsdatadaemon]
 user: AID_SYSTEM
