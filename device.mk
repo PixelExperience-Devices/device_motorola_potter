@@ -388,6 +388,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libqsap_sdk \
+    libcld80211 \
     libwpa_client \
     wcnss_service \
     wificond \
