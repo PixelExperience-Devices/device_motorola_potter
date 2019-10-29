@@ -192,6 +192,7 @@ PRODUCT_PACKAGES += \
     libgnss \
     libgnsspps \
     libqsap_sdk \
+    libgpu_mapper_shim \
     libqsap_shim
 
 PRODUCT_COPY_FILES += \
