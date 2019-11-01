@@ -2,7 +2,7 @@
 /system/etc/audio_policy_configuration.xml               u:object_r:vendor_configs_file:s0
 
 # ADSP
-/sys/kernel/aov(/.*)?                                    u:object_r:sysfs_adsp:s0
+#/sys/kernel/aov(/.*)?                                    u:object_r:sysfs_adsp:s0
 /data/adspd(/.*)?                                        u:object_r:adspd_data_file:s0
 
 # AMPS
@@ -151,9 +151,10 @@
 /sys/android_touch/gesture_swipe_down                    u:object_r:sysfs_screen_off_gestures:s0
 /sys/android_touch/gesture_swipe_up                      u:object_r:sysfs_screen_off_gestures:s0
 
-# Fingerprint custom hal
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice u:object_r:hal_fingerprint_default_exec:s0
-
 # DRM
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine            u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey            u:object_r:hal_drm_clearkey_exec:s0
+
+#Partitions
+/firmware(/.*)?                                          u:object_r:firmware_file:s0
+/fsg(/.*)?                                               u:object_r:fsg_file:s0

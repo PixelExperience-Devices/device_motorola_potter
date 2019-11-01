@@ -227,6 +227,7 @@ TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Sensor
 USE_SENSOR_MULTI_HAL := true
