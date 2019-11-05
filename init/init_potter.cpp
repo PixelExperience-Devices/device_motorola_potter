@@ -83,13 +83,15 @@ void num_sims() {
 
 void vendor_load_properties()
 {
-    // sku
-    std::string sku = android::base::GetProperty("ro.boot.hardware.sku", "");
-    property_override_dual("ro.product.model", "ro.vendor.product.model", sku.c_str());
-
     // fingerprint
     property_override("ro.build.description", "potter-7.0/NPNS25.137-33-11/11:user/release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys");
+
+    // sku
+    std::string sku = "Moto G5 Plus (";
+    sku.append(android::base::GetProperty("ro.boot.hardware.sku", ""));
+    sku.append(")");
+    property_set("ro.product.model", sku.c_str());
 
     // rmt_storage
     std::string device = android::base::GetProperty("ro.boot.device", "");
