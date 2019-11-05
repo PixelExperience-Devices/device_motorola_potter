@@ -23,16 +23,17 @@ $(call inherit-product, vendor/du/config/common_full_phone.mk)
 # TWRP theme
 TW_THEME := portrait_hdpi
 
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
 PRODUCT_NAME := du_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := Motorola
-PRODUCT_MODEL := Moto G5 Plus
 PRODUCT_RELEASE_NAME := potter
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="potter" \
+    PRODUCT_NAME="Moto G5 Plus" \
     PRIVATE_BUILD_DESC="potter-7.0/NPNS25.137-33-11/11:user/release-keys"
 
 BUILD_FINGERPRINT := motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys
