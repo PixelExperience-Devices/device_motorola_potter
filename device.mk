@@ -410,10 +410,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     libQWiFiSoftApCfg \
-    wificond \
-    wifilogd \
-    tcpdump \
-    libwpa_client
+    tcpdump
 
 # Wifi Symlinks
 PRODUCT_PACKAGES += \
@@ -438,13 +435,5 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi Display
 #PRODUCT_BOOT_JARS += \
   #  WfdCommon
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.config.vc_call_vol_steps=7 \
-	ro.config.media_vol_steps=20
-
-PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
