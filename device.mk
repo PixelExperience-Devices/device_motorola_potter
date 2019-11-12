@@ -225,8 +225,8 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
 
-#PRODUCT_BOOT_JARS += \
-  #  telephony-ext
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 PRODUCT_PACKAGES += \
     qti-telephony-utils \
@@ -434,7 +434,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/zaf/zaf_mot_s5k2l7.json:system/etc/zaf/zaf_mot_s5k2l7.json
 
 # Wi-Fi Display
-#PRODUCT_BOOT_JARS += \
-  #  WfdCommon
+PRODUCT_BOOT_JARS += \
+    WfdCommon
 
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
