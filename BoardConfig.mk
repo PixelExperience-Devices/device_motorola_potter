@@ -255,7 +255,7 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/adspd|libshim_adsp.so \
     /system/vendor/lib64/libmdmcutback.so|libqsap_shim.so \
-    /system/lib/libjustshoot.so|libjustshoot_shim.so \
+    /system/vendor/lib/libjustshoot.so|libjustshoot_shim.so \
     /system/lib/hw/camera.msm8953.so|libshim_camera.so \
     /system/vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
 
