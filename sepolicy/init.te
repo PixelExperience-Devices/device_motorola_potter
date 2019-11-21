@@ -42,7 +42,7 @@ allow init self:netlink_route_socket { bind create getopt nlmsg_read read setopt
 
 allow init self:capability2 { block_suspend };
 
-allow init hal_sensors_hwservice:hwservice_manager find;
+#allow init hal_sensors_hwservice:hwservice_manager find;
 
 allow init { domain -lmkd -crash_dump }:process noatsecure;
 

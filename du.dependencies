@@ -15,6 +15,11 @@
     "branch" : "q10x"
  },
  {
+    "repository" : "DirtyUnicorns/android_device_qcom_sepolicy",
+    "target_path": "device/qcom/sepolicy-legacy",
+    "branch"     : "q10x-legacy"
+ },
+ {
     "repository": "DirtyUnicorns/android_vendor_motorola",
     "target_path": "vendor/motorola",
     "branch" : "q10x"
