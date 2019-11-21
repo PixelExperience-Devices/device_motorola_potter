@@ -5,16 +5,6 @@
     "branch" : "q10x"
  },
  {
-    "repository": "DirtyUnicorns/android_hardware_qcom_fm",
-    "target_path": "hardware/qcom-caf/fm",
-    "branch" : "q10x-caf"
- },
- {
-    "repository": "DirtyUnicorns/android_packages_apps_FMRadio",
-    "target_path": "packages/apps/FMRadio",
-    "branch" : "q10x"
- },
- {
     "repository" : "DirtyUnicorns/android_device_qcom_sepolicy",
     "target_path": "device/qcom/sepolicy-legacy",
     "branch"     : "q10x-legacy"
@@ -42,11 +32,6 @@
  {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_interfaces",
     "target_path": "vendor/qcom/opensource/interfaces",
-    "branch" : "q10x"
- },
- {
-    "repository": "DirtyUnicorns/android_vendor_qcom_opensource_libfmjni",
-    "target_path": "vendor/qcom/opensource/libfmjni",
     "branch" : "q10x"
  },
  {
