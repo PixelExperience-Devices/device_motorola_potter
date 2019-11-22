@@ -5,6 +5,11 @@
     "branch" : "q10x"
  },
  {
+    "repository" : "DirtyUnicorns/android_hardware_qcom_thermal",
+    "target_path": "hardware/qcom-caf/thermal",
+    "branch"     : "q10x"
+ },
+ {
     "repository" : "DirtyUnicorns/android_device_qcom_sepolicy",
     "target_path": "device/qcom/sepolicy-legacy",
     "branch"     : "q10x-legacy"
