@@ -2,7 +2,7 @@
   {
     "repository":  "ZJRDroid/android_kernel_moto_msm8953",
     "target_path": "kernel/motorola/potter",
-    "branch": "q10x"
+    "branch": "ten"
   },
   {
     "repository": "vendor_motorola_potter",
