@@ -53,5 +53,10 @@
     "repository": "DirtyUnicorns/android_system_qcom",
     "target_path": "system/qcom",
     "branch" : "q10x"
+ },
+ {
+   "repository":  "gitlab.com/DirtyUnicorns/android_vendor_pixelgapps",
+   "target_path": "vendor/pixelgapps",
+   "branch":      "q10x"
  }
 ]

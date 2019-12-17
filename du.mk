@@ -20,6 +20,9 @@ $(call inherit-product, device/moto/potter/full_potter.mk)
 # Inherit some common DU stuff.
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
+# PixelGApps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
 # TWRP theme
 TW_THEME := portrait_hdpi
 
