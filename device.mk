@@ -170,6 +170,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Display Calibration
+ PRODUCT_PACKAGES += \
+    libjni_livedisplay
+
 # DRM
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite \
