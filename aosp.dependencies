@@ -5,8 +5,8 @@
     "branch": "ten"
   },
   {
-    "repository": "vendor_motorola_potter",
-    "target_path": "vendor/motorola/potter",
+    "repository": "vendor_motorola",
+    "target_path": "vendor/motorola",
     "branch": "ten"
   },
   { 
