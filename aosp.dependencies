@@ -1,6 +1,6 @@
 [
   {
-    "repository":  "ZJRDroid/android_kernel_moto_msm8953",
+    "repository":  "kernel_motorola_potter",
     "target_path": "kernel/motorola/potter",
     "branch": "ten"
   },
