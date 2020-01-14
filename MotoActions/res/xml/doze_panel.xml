@@ -18,16 +18,34 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <SwitchPreference
-        android:key="gesture_pick_up"
-        android:defaultValue="false"
-        android:title="@string/pick_up_gesture_title"
-        android:summary="@string/pick_up_gesture_summary"
-        android:icon="@drawable/ic_pickup" />
+        android:key="ambient_display"
+        android:defaultValue="true"
+        android:title="@string/ambient_display_title"
+        android:summary="@string/ambient_display_summary" />
 
-    <SwitchPreference
-        android:key="gesture_hand_wave"
-        android:defaultValue="false"
-        android:title="@string/hand_wave_gesture_title"
-        android:summary="@string/hand_wave_gesture_summary"
-        android:icon="@drawable/ic_hand" />
+    <PreferenceCategory
+        android:key="tilt_sensor"
+        android:title="@string/tilt_sensor_title" >
+
+        <SwitchPreference
+            android:key="gesture_pick_up"
+            android:defaultValue="false"
+            android:title="@string/pick_up_gesture_title"
+            android:summary="@string/pick_up_gesture_summary"
+            android:icon="@drawable/ic_pickup" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="priximity_sensor"
+        android:title="@string/priximity_sensor_title" >
+
+        <SwitchPreference
+            android:key="gesture_hand_wave"
+            android:defaultValue="false"
+            android:title="@string/hand_wave_gesture_title"
+            android:summary="@string/hand_wave_gesture_summary"
+            android:icon="@drawable/ic_hand" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

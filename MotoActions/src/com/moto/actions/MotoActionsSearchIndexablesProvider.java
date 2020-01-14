@@ -66,9 +66,6 @@ public class MotoActionsSearchIndexablesProvider extends SearchIndexablesProvide
         cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel,
                     DozeSettingsActivity.class.getName(),
                     R.drawable.ic_settings_doze)));
-        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel_indexable,
-                    DozeSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_doze)));
 
         return cursor;
     }

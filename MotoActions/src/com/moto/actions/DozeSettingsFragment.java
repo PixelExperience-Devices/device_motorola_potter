@@ -30,23 +30,25 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-public class DozeSettingsFragment extends PreferenceFragment {
+public class DozeSettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
+    private SwitchPreference mAmbientDisplayPreference;
     private SwitchPreference mHandwavePreference;
     private SwitchPreference mPickupPreference;
 
     private TextView mSwitchBarText;
     private Switch mAmbientDisplaySwitch;
 
+    private String AMBIENT_DISPLAY_KEY = "ambient_display";
     private String KEY_GESTURE_HAND_WAVE = "gesture_hand_wave";
     private String KEY_GESTURE_PICK_UP = "gesture_pick_up";
-    
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ActionBar actionbar = getActivity().getActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setTitle(R.string.ambient_display_title);
+        actionbar.setTitle(R.string.ambient_display_custom_title);
     }
 
     @Override
@@ -60,44 +62,35 @@ public class DozeSettingsFragment extends PreferenceFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        View switchBar = view.findViewById(R.id.switch_bar);
-        mAmbientDisplaySwitch = (Switch) switchBar.findViewById(android.R.id.switch_widget);
-        mAmbientDisplaySwitch.setChecked(MotoActionsSettings.isDozeEnabled(getActivity().getContentResolver()));
-        mAmbientDisplaySwitch.setOnCheckedChangeListener(mAmbientDisplayPrefListener);
-
-        switchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAmbientDisplaySwitch.toggle();
-            }
-        });
-
-        mSwitchBarText = switchBar.findViewById(R.id.switch_text);
-        mSwitchBarText.setText(MotoActionsSettings.isDozeEnabled(getActivity().getContentResolver()) ? R.string.switch_bar_on :
-                R.string.switch_bar_off);
     }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.doze_panel);
         boolean dozeEnabled = MotoActionsSettings.isDozeEnabled(getActivity().getContentResolver());
+
+        mAmbientDisplayPreference = (SwitchPreference) findPreference(AMBIENT_DISPLAY_KEY);
+        mAmbientDisplayPreference.setOnPreferenceChangeListener(this);
+        mAmbientDisplayPreference.setChecked(dozeEnabled);
+
         mHandwavePreference = (SwitchPreference) findPreference(KEY_GESTURE_HAND_WAVE);
         mPickupPreference = (SwitchPreference) findPreference(KEY_GESTURE_PICK_UP);
         updatePrefs(dozeEnabled);
     }
 
-    private CompoundButton.OnCheckedChangeListener mAmbientDisplayPrefListener =
-        new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton compoundButton, boolean enable) {
-            if (enableDoze(enable)) {
-                updatePrefs(enable);
-                mSwitchBarText.setText(enable ? R.string.switch_bar_on : R.string.switch_bar_off);
-            }
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        final String key = preference.getKey();
+        final boolean enabled = (Boolean) newValue;
+        if (AMBIENT_DISPLAY_KEY.equals(key)) {
+            mAmbientDisplayPreference.setChecked(enabled);
+            updatePrefs(enabled);
+            enableDoze(enabled);
+            return true;
         }
-    };
-    
+        return false;
+    }
+
     private void updatePrefs(boolean enabled){
         mHandwavePreference.setEnabled(enabled);
         mPickupPreference.setEnabled(enabled);
