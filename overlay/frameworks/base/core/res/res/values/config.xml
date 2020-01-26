@@ -506,4 +506,7 @@
 
     <!-- Smart charging -->
     <bool name="config_smartChargingAvailable">false</bool>
+
+    <!-- Whether to use in-built Screen Record service -->
+    <bool name="config_showScreenRecord">true</bool>
 </resources>
