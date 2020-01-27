@@ -257,9 +257,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service.potter
 
-# MotoActions
+# LineageActions
 PRODUCT_PACKAGES += \
-    MotoActions
+    LineageActions
 
 # Media
 PRODUCT_PACKAGES += \
