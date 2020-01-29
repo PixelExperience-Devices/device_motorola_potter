@@ -72,6 +72,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_potter
 TARGET_RECOVERY_DEVICE_MODULES := //$(DEVICE_PATH):libinit_potter
 
+# Ignore Neverallow
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom user_debug=30
