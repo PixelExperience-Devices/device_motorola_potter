@@ -37,6 +37,8 @@
 
 using android::init::property_set;
 
+constexpr const char* BUILD_FINGERPRINT = "motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys";
+
 void property_override(char const prop[], char const value[])
 {
     prop_info *pi;
@@ -90,6 +92,8 @@ void vendor_load_properties()
     property_set("ro.vendor.hw.radio", radio.c_str());
     property_set("ro.hw.fps", "true");
     property_set("ro.hw.imager", "12MP");
+    property_set("ro.build.fingerprint", BUILD_FINGERPRINT);
+    property_set("ro.vendor.build.fingerprint", BUILD_FINGERPRINT);
 
     num_sims();
 
