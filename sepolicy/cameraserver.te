@@ -34,11 +34,8 @@ allow cameraserver init:unix_dgram_socket { sendto};
 binder_call(cameraserver, hal_perf_default)
 binder_call(cameraserver, hal_configstore_default)
 
-####
-#allow cameraserver debug_prop:file { r_file_perms };
 allow cameraserver debug_prop:property_service set;
 
-#######
 allow cameraserver shell_exec:file { read open execute };
 allow cameraserver self:socket create;
 allow cameraserver camera_prop:property_service set;
