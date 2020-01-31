@@ -39,8 +39,7 @@ PRODUCT_NAME := aosp_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
