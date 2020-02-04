@@ -108,6 +108,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
+ # Charger Images
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
