@@ -1,18 +1,7 @@
 # Proprietary files for potter
 
--app/datastatusnotification/datastatusnotification.apk
--app/embms/embms.apk
--app/TimeService/TimeService.apk
-bin/adspd
-bin/adsprpcd
-bin/btnvtool
-bin/charge_only_mode
-bin/cnd
-bin/hci_qcomm_init
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
+-app/ims/ims.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk
 bin/ipacm-diag
 bin/irsc_util
 bin/mm-qcamera-daemon
