@@ -48,9 +48,9 @@ void property_override(char const prop[], char const value[])
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_dual(char const system_prop[], char const vendor_prop[],
-    char const value[])
+void property_override_triple(char const product_prop[], char const system_prop[], char const vendor_prop[], char const value[])
 {
+    property_override(product_prop, value);
     property_override(system_prop, value);
     property_override(vendor_prop, value);
 }
@@ -84,15 +84,15 @@ void num_sims() {
 
 void vendor_load_properties()
 {
+    // fingerprint
+    property_override("ro.build.description", "potter-7.0/NPNS25.137-33-11/11:user/release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
+
     // sku
     std::string sku = "Moto G5 Plus (";
     sku.append(android::base::GetProperty("ro.boot.hardware.sku", ""));
     sku.append(")");
     property_set("ro.product.model", sku.c_str());
-
-    // fingerprint
-    property_override("ro.build.description", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
 
     // rmt_storage
     std::string device = android::base::GetProperty("ro.boot.device", "");
