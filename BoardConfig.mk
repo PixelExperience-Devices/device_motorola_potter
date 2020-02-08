@@ -258,7 +258,7 @@ TARGET_LD_SHIM_LIBS := \
 TARGET_USES_MKE2FS := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-12-01
+VENDOR_SECURITY_PATCH := 2019-02-01
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
