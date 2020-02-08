@@ -85,7 +85,7 @@ void num_sims() {
 void vendor_load_properties()
 {
     // fingerprint
-    property_override("ro.build.description", "potter-7.0/NPNS25.137-33-11/11:user/release-keys");
+    property_override("ro.build.description", "potter-user 8.1.0 OPSS28.85-17-4 28698 release-keys");
     property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
 
     // sku
