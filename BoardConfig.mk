@@ -229,8 +229,6 @@ include device/qcom/sepolicy-legacy-um/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-SELINUX_IGNORE_NEVERALLOWS := true
-
 # Sensor
 USE_SENSOR_MULTI_HAL := true
 BOARD_USES_MOT_SENSOR_HUB := true
