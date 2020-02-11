@@ -21,6 +21,11 @@ import android.os.Bundle;
 import androidx.preference.PreferenceFragment;
 
 public class ActionsPreferenceFragment extends PreferenceFragment {
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

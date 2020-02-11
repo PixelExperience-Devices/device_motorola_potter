@@ -17,6 +17,7 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
+
 import android.preference.PreferenceActivity;
 
 public class ActionsPreferenceActivity extends PreferenceActivity {
@@ -24,12 +25,9 @@ public class ActionsPreferenceActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getActionBar() != null) {
-            getActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
+        if (savedInstanceState == null){
             getFragmentManager().beginTransaction()
                     .replace(android.R.id.content, new ActionsPreferenceFragment()).commit();
         }
     }
+}

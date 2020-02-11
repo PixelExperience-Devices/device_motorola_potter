@@ -15,8 +15,9 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
+package org.lineageos.settings.device.doze;
 
-public interface UpdatedStateNotifier {
-    public void updateState();
+public interface ScreenStateNotifier {
+    public void screenTurnedOn();
+    public void screenTurnedOff();
 }

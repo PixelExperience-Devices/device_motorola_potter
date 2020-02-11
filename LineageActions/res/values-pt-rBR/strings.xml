@@ -88,5 +88,4 @@
    <!-- Screen off gestures haptic feedback -->
    <string name="haptic_feedback">Retorno tátil</string>
    <string name="haptic_feedback_summary">Vibrar quando um gesto for detectado</string>
-   
 </resources>

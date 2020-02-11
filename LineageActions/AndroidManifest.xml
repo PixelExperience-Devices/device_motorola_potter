@@ -7,11 +7,12 @@
     <original-package android:name="com.cyanogenmod.settings.device" />
 
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <application
         android:allowBackup="true"
@@ -45,6 +46,16 @@
         </service>
 
         <activity
+            android:name=".DozeSettingsActivity"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/LineageActions">
+            <intent-filter>
+                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".ActionsPreferenceActivity"
             android:label="@string/moto_actions_title"
             android:summary="@string/device_gestures_summary"
@@ -74,7 +85,6 @@
             android:label="@string/fingerprint_gestures_title"
             android:theme="@style/LineageActions">
         </activity>
-
     </application>
 
 </manifest>

@@ -1,6 +1,5 @@
 /*
- * Copyright (c) 2015 The CyanogenMod Project
- * Copyright (c) 2017 The LineageOS Project
+ * Copyright (c) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,8 +14,20 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
+package org.lineageos.settings.device;
 
-public interface UpdatedStateNotifier {
-    public void updateState();
+import android.os.Bundle;
+
+import android.preference.PreferenceActivity;
+
+public class DozeSettingsActivity extends PreferenceActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState == null){
+            getFragmentManager().beginTransaction()
+                    .replace(android.R.id.content, new DozeSettingsFragment()).commit();
+        }
+    }
 }

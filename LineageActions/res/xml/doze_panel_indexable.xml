@@ -19,9 +19,9 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <Preference
-        android:key="fp_gestures"
-        android:title="@string/fingerprint_gestures_title"
-        android:summary="@string/fingerprint_gestures_manage_summary"
-        android:icon="@drawable/ic_settings_fingerprint" />
+        android:key="doze"
+        android:title="@string/ambient_display_title"
+        android:summary="@string/ambient_display_manage_summary"
+        android:icon="@drawable/ic_settings_doze" />
 
 </PreferenceScreen>

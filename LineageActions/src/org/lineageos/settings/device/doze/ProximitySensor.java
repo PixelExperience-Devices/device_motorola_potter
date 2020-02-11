@@ -15,56 +15,67 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
-
-import java.util.List;
+package org.lineageos.settings.device.doze;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.util.Log;
 
 import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.SensorAction;
 import org.lineageos.settings.device.SensorHelper;
 
-public class CameraActivationSensor implements SensorEventListener, UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-CameraSensor";
-
-    private static final int TURN_SCREEN_ON_WAKE_LOCK_MS = 500;
+public class ProximitySensor implements ScreenStateNotifier, SensorEventListener {
+    private static final String TAG = "LineageActions-ProximitySensor";
 
     private final LineageActionsSettings mLineageActionsSettings;
     private final SensorHelper mSensorHelper;
-
+    private final SensorAction mSensorAction;
     private final Sensor mSensor;
 
-    private boolean mIsEnabled;
+    private boolean mEnabled;
 
-    public CameraActivationSensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper) {
+    private boolean mSawNear = false;
+
+    public ProximitySensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper,
+                SensorAction action) {
         mLineageActionsSettings = lineageActionsSettings;
         mSensorHelper = sensorHelper;
-        mSensor = sensorHelper.getCameraActivationSensor();
-        mSensorHelper.registerListener(mSensor, this);
+        mSensorAction = action;
+
+        mSensor = sensorHelper.getProximitySensor();
     }
 
     @Override
-    public synchronized void updateState() {
-        if (mLineageActionsSettings.isCameraGestureEnabled() && !mIsEnabled) {
-            Log.d(TAG, "Enabling");
-            mIsEnabled = true;
-        } else if (! mLineageActionsSettings.isCameraGestureEnabled() && mIsEnabled) {
+    public void screenTurnedOn() {
+        if (mEnabled) {
             Log.d(TAG, "Disabling");
-            mIsEnabled = false;
+            mSensorHelper.unregisterListener(this);
+            mEnabled = false;
+        }
+    }
+
+    @Override
+    public void screenTurnedOff() {
+        if (mLineageActionsSettings.isIrWakeupEnabled() && !mEnabled) {
+            Log.d(TAG, "Enabling");
+            mSensorHelper.registerListener(mSensor, this);
+            mEnabled = true;
         }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        Log.d(TAG, "activate camera");
-        if (mIsEnabled) mLineageActionsSettings.cameraAction();
+        boolean isNear = event.values[0] < mSensor.getMaximumRange();
+        if (mSawNear && !isNear) {
+            Log.d(TAG, "wave triggered");
+            mSensorAction.action();
+        }
+        mSawNear = isNear;
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    public void onAccuracyChanged(Sensor mSensor, int accuracy) {
     }
 }

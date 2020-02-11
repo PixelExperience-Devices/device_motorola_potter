@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2015-2016 The CyanogenMod Project
      Copyright (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License"
@@ -18,10 +17,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-        android:key="fp_gestures"
-        android:title="@string/fingerprint_gestures_title"
-        android:summary="@string/fingerprint_gestures_manage_summary"
-        android:icon="@drawable/ic_settings_fingerprint" />
+    <SwitchPreference
+        android:key="gesture_pick_up"
+        android:defaultValue="true"
+        android:title="@string/pick_up_gesture_title"
+        android:summary="@string/pick_up_gesture_summary" />
+
+    <SwitchPreference
+        android:key="gesture_hand_wave"
+        android:defaultValue="true"
+        android:title="@string/hand_wave_gesture_title"
+        android:summary="@string/hand_wave_gesture_summary" />
 
 </PreferenceScreen>

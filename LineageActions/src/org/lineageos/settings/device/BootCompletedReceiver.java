@@ -27,11 +27,13 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
+import org.lineageos.settings.device.util.FileUtils;
 import org.lineageos.settings.device.actions.Constants;
 import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "LineageActions";
+    final String NAVBAR_SHOWN = "navbar_shown";
 
     private ServiceWrapper mServiceWrapper;
 
@@ -39,16 +41,24 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         Log.i(TAG, "Booting");
 
-        if (intent.getAction() != null && !intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            return;
-        }
-
         // Restore nodes to saved preference values
         for (String pref : Constants.sPrefKeys) {
              Constants.writePreference(context, pref);
         }
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        if (!preferences.getBoolean(NAVBAR_SHOWN, false)) {
+            enableNavBar(true, context);
+            preferences.edit().putBoolean(NAVBAR_SHOWN, true).commit(); 
+        }
+
         context.startService(new Intent(context, ServiceWrapper.class));
+    }
+
+    protected static void enableNavBar(boolean enable, Context context) {
+       // LineageSettings.Global.putInt(context.getContentResolver(),
+            //    LineageSettings.Global.DEV_FORCE_SHOW_NAVBAR, enable ? 1 : 0);
     }
 
     private ServiceConnection serviceConnection = new ServiceConnection() {

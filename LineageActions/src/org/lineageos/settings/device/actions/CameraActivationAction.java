@@ -17,6 +17,8 @@
 
 package org.lineageos.settings.device.actions;
 
+import java.util.List;
+
 import android.app.KeyguardManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -26,13 +28,11 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
-import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import org.lineageos.settings.device.SensorAction;
-
-import java.util.List;
 
 public class CameraActivationAction implements SensorAction {
     private static final String TAG = "LineageActions";
@@ -55,7 +55,7 @@ public class CameraActivationAction implements SensorAction {
     public void action() {
         vibrate();
         turnScreenOn();
-        if (mKeyguardManager.isKeyguardLocked()) {
+        if (mKeyguardManager.inKeyguardRestrictedInputMode()) {
             launchSecureCamera();
         } else {
             launchCamera();
@@ -63,16 +63,13 @@ public class CameraActivationAction implements SensorAction {
     }
 
     private void vibrate() {
-        Vibrator vib = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-        if (vib == null) return;
-        VibrationEffect effect = VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE);
-        vib.vibrate(effect);
+        Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(500);
     }
 
     private void turnScreenOn() {
-        String tag = mContext.getPackageName() + ":CameraWakeLock";
-        WakeLock wl = mPowerManager.newWakeLock(
-            PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, tag);
+        PowerManager.WakeLock wl = mPowerManager.newWakeLock(
+            PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, TAG);
         wl.acquire(TURN_SCREEN_ON_WAKE_LOCK_MS);
     }
 
