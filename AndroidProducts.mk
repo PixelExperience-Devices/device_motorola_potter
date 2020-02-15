@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_potter.mk
+    $(LOCAL_DIR)/aosp_potter.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_potter-user \
-    lineage_potter-userdebug \
-    lineage_potter-eng
+    aosp_potter-user \
+    aosp_potter-userdebug \
+    aosp_potter-eng
