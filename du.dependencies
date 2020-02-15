@@ -25,6 +25,11 @@
     "branch" : "q10x"
  },
  {
+   "repository" : "DirtyUnicorns/android_vendor_qcom_opensource_cryptfs_hw",
+   "target_path": "vendor/qcom/opensource/cryptfs_hw",
+   "branch"     : "q10x"
+ },
+ {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_data-ipa-cfg-mgr",
     "target_path": "vendor/qcom/opensource/data-ipa-cfg-mgr",
     "branch" : "q10x"
