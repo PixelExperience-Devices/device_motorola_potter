@@ -259,7 +259,7 @@ PRODUCT_PACKAGES += \
 
 # LineageActions
 PRODUCT_PACKAGES += \
-    LineageActions
+    MotoActions
 
 # Media
 PRODUCT_PACKAGES += \
