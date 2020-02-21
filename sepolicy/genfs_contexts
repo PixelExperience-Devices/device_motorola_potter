@@ -3,3 +3,4 @@ genfscon debugfs /system_stats u:object_r:debugfs_rpm:s0
 genfscon debugfs /rpm_stats                           u:object_r:debugfs_rpm:s0
 genfscon debugfs /rpm_master_stats u:object_r:debugfs_rpm:s0
 
+genfscon sysfs /sys/android_touch/doubletap2wake                 u:object_r:sysfs_doubletap:s0

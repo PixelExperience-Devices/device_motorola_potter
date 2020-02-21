@@ -58,5 +58,7 @@ type debugfs_rpm, debugfs_type, fs_type;
 # Screen off gestures
 type sysfs_screen_off_gestures, fs_type, sysfs_type, mlstrustedobject;
 
+type sysfs_doubletap, sysfs_type, fs_type;
+
 type sysfs_msm_subsys, sysfs_type, fs_type;
 
