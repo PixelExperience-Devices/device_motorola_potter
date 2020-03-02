@@ -534,4 +534,8 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Whether device can force navbar disabling -->
+    <bool name="config_canForceDisableNavigationBar">true</bool>
+
 </resources>
