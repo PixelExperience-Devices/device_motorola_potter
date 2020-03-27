@@ -78,6 +78,9 @@ on late-fs
     # Set permissions for persist partition
     mkdir /persist 0771 root system
 
+    # Link up to vendor.
+    symlink /persist /mnt/vendor/persist
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
