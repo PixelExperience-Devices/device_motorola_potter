@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
     libjustshoot_shim \
-    libshim_camera \
     libgui_vendor
 
 PRODUCT_COPY_FILES += \
