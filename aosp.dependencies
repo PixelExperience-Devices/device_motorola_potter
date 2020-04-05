@@ -16,6 +16,12 @@
     "branch": "pie"
   },
   {
+    "remote": "pixel",
+    "repository": "packages_resources_devicesettings-custom",
+    "target_path": "packages/resources/MotoActions-custom",
+    "branch": "ten"
+  },
+  {
     "remote": "lineage",
     "repository": "android_system_qcom",
     "target_path": "system/qcom",
