@@ -26,14 +26,14 @@
 
     <SwitchPreference
         android:key="haptic_feedback"
-        android:title="@string/haptic_feedback"
+        android:title="@string/touchscreen_gesture_haptic_feedback"
         android:icon="@drawable/ic_vibrate"
-        android:summary="@string/haptic_feedback_summary" />
+        android:summary="@string/touchscreen_gesture_haptic_feedback_summary" />
 
     <ListPreference
-        android:title="@string/screen_off_gestures_swipe_left_title"
+        android:title="@string/touchscreen_swipe_left_title"
         android:summary="%s"
-        android:dialogTitle="@string/screen_off_gestures_swipe_left_dlg_title"
+        android:dialogTitle="@string/swipe_left_dlg_title"
         android:key="screen_off_gestures_swipe_left"
         android:defaultValue="0"
         android:entries="@array/screen_off_listArray"
@@ -41,9 +41,9 @@
         android:entryValues="@array/screen_off_listValues" />
 
     <ListPreference
-        android:title="@string/screen_off_gestures_swipe_right_title"
+        android:title="@string/touchscreen_swipe_right_title"
         android:summary="%s"
-        android:dialogTitle="@string/screen_off_gestures_swipe_right_dlg_title"
+        android:dialogTitle="@string/swipe_right_dlg_title"
         android:key="screen_off_gestures_swipe_right"
         android:defaultValue="0"
         android:entries="@array/screen_off_listArray"
@@ -51,9 +51,9 @@
         android:entryValues="@array/screen_off_listValues" />
 
     <ListPreference
-        android:title="@string/screen_off_gestures_swipe_up_title"
+        android:title="@string/touchscreen_swipe_up_title"
         android:summary="%s"
-        android:dialogTitle="@string/screen_off_gestures_swipe_up_dlg_title"
+        android:dialogTitle="@string/swipe_up_dlg_title"
         android:key="screen_off_gestures_swipe_up"
         android:defaultValue="0"
         android:entries="@array/screen_off_listArray"
@@ -61,9 +61,9 @@
         android:entryValues="@array/screen_off_listValues" />
 
     <ListPreference
-        android:title="@string/screen_off_gestures_swipe_down_title"
+        android:title="@string/touchscreen_swipe_down_title"
         android:summary="%s"
-        android:dialogTitle="@string/screen_off_gestures_swipe_down_dlg_title"
+        android:dialogTitle="@string/swipe_down_dlg_title"
         android:key="screen_off_gestures_swipe_down"
         android:defaultValue="0"
         android:entries="@array/screen_off_listArray"
