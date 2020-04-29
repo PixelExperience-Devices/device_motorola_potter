@@ -23,3 +23,5 @@ libsync.so
 libvulkan.so
 libwebviewchromium_plat_support.so
 libz.so
+libprotobuf-cpp-full.so
+libprotobuf-cpp-lite.so
