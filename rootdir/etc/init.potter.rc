@@ -26,6 +26,8 @@
 #
 
 on property:sys.boot_completed=1
+    #Set device hostname on boot
+    setprop net.hostname Moto-G5-Plus
     # Enable ZRAM on boot_complete
     swapon_all /system/vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 80
