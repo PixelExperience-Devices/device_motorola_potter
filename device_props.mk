@@ -352,3 +352,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fast App Launch
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=1
