@@ -14,5 +14,11 @@
     "repository": "android_system_qcom",
     "target_path": "system/qcom",
     "branch": "lineage-17.1"
+   },
+   {
+    "remote": "gitlab",
+    "repository": "ZJRDroid/packages_apps_GoogleCameraMod",
+    "target_path": "packages/apps/GoogleCameraMod",
+    "branch": "ten"
   }
 ]
