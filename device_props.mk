@@ -343,3 +343,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
+# Camera Aux Package list
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.google.android.apps.cameraslite,org.codeaurora.snapcam
