@@ -60,7 +60,7 @@
     "branch" : "q10x"
  },
  {
-   "repository":  "gitlab.com/DirtyUnicorns/android_vendor_pixelgapps",
+   "repository":  "android_vendor_pixelgapps",
    "target_path": "vendor/pixelgapps",
    "branch":      "q10x"
  }
