@@ -86,7 +86,7 @@ void vendor_load_properties()
 {
     // fingerprint
     property_override("ro.build.description", "potter-user 8.1.0 OPSS28.85-17-4 28698 release-keys");
-    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200605.001/6392402:user/release-keys");
 
     // sku
     std::string sku = "Moto G5 Plus (";
