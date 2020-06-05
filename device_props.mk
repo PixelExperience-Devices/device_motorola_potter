@@ -347,3 +347,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Camera Aux Package list
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.google.android.apps.cameraslite,org.codeaurora.snapcam
+
+# Fast App Launch
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
