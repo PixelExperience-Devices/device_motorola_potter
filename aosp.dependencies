@@ -5,8 +5,9 @@
     "branch": "ten"
   },
   {
-    "repository": "vendor_motorola",
-    "target_path": "vendor/motorola",
+    "remote": "pixel-devices-bitbucket",
+    "repository": "vendor_motorola_potter",
+    "target_path": "vendor/motorola/potter",
     "branch": "ten"
   },
   { 
