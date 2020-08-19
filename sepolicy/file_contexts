@@ -64,9 +64,9 @@
 /sys/module/qpnp_bms(/.*)?                               u:object_r:sysfs_batt:s0
 /sys/module/cnss_pci(/.*)?                               u:object_r:sysfs_cnss:s0
 
-/sys/devices/iio_sysfs_trigger(/.*)?                     u:object_r:sysfs_sensors:s0
-/sys/devices/virtual/stm401/stm401_ms(/.*)?              u:object_r:sysfs_sensors:s0
-/sys/devices/virtual/stm401/stm401_as(/.*)?              u:object_r:sysfs_sensors:s0
+/sys/devices/iio_sysfs_trigger(/.*)?                     u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/virtual/stm401/stm401_ms(/.*)?              u:object_r:vendor_sysfs_sensors:s0
+/sys/devices/virtual/stm401/stm401_as(/.*)?              u:object_r:vendor_sysfs_sensors:s0
 
 /sys/devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger(/.*)? u:object_r:sysfs_batt:s0
 
