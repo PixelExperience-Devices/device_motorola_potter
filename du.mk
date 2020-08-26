@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/moto/potter/full_potter.mk)
+$(call inherit-product, device/motorola/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
 $(call inherit-product, vendor/du/config/common_full_phone.mk)

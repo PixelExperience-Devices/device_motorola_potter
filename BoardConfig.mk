@@ -17,7 +17,7 @@
 
 -include vendor/motorola/potter/BoardConfigVendor.mk
 
-DEVICE_PATH := device/moto/potter
+DEVICE_PATH := device/motorola/potter
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -87,7 +87,7 @@ TARGET_KERNEL_ARCH := arm64
 BOARD_DTBTOOL_ARGS := --force-v3
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := potter_defconfig
-TARGET_KERNEL_SOURCE := kernel/moto/msm8953
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 10.0.5
 

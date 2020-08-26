@@ -1,7 +1,7 @@
 [
  {
-    "repository": "DirtyUnicorns/android_kernel_moto_msm8953",
-    "target_path": "kernel/moto/msm8953",
+    "repository": "DirtyUnicorns/android_kernel_motorola_msm8953",
+    "target_path": "kernel/motorola/msm8953",
     "branch" : "q10x"
  },
  {
