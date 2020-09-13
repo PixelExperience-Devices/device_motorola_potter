@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libdisplayconfig \
     libqdMetaData.system \
+    libcutils_shim \
 
 PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
