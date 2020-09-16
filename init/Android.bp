@@ -21,5 +21,8 @@ cc_library_static {
     whole_static_libs: ["libbase"],
     include_dirs: [
         "system/core/init"
+    ],
+    shared_libs: [
+        "libbase",
     ]
 }
