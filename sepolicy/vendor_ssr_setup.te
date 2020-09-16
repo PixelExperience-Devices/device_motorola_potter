@@ -1,2 +1,2 @@
-allow vendor_ssr_setup sysfs:file  { read open };
+#allow vendor_ssr_setup sysfs:file  { read open };
 

@@ -1,4 +1,4 @@
-allow cnd system_wpa_socket:sock_file { unlink };
-allow cnd sysfs:file {open read};
+#allow cnd system_wpa_socket:sock_file { unlink };
+#allow cnd sysfs:file {open read};
 
-add_hwservice(cnd, hal_cne_hwservice)
+#add_hwservice(cnd, hal_cne_hwservice)

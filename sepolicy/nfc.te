@@ -1,2 +1,2 @@
-allow nfc nfc_vendor_data_file:dir search;
-allow nfc nfc_vendor_data_file:file create;
+#allow nfc nfc_vendor_data_file:dir search;
+#allow nfc nfc_vendor_data_file:file create;

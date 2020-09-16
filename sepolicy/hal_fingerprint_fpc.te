@@ -12,8 +12,8 @@ get_prop(hal_fingerprint_fpc, hwservicemanager_prop)
 
 
 
-r_dir_file(hal_fingerprint_fpc, firmware_file)
-r_dir_file(hal_fingerprint_fpc, sysfs_devfreq)
+#r_dir_file(hal_fingerprint_fpc, firmware_file)
+#r_dir_file(hal_fingerprint_fpc, sysfs_devfreq)
 
 allow hal_fingerprint_fpc tee_device:chr_file { open read write ioctl };
 allow hal_fingerprint_fpc uhid_device:chr_file rw_file_perms;

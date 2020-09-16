@@ -3,6 +3,10 @@ type adspd_data_file, file_type, data_file_type, core_data_file_type;
 
 # FSG
 type fsg_file, fs_type, contextmount_type;
+type dsp_file, fs_type, contextmount_type;
+type firmware_file, fs_type, contextmount_type;
+type bt_firmware_file, fs_type, contextmount_type;
+type persist_file, fs_type, contextmount_type;
 
 # Modem
 type persist_modem_file, file_type, data_file_type;

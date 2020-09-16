@@ -5,4 +5,4 @@ allow surfaceflinger perfd:unix_stream_socket connectto;
 
 binder_call(surfaceflinger, hwservicemanager)
 
-allow surfaceflinger sysfs_kgsl:file r_file_perms;
+#allow surfaceflinger sysfs_kgsl:file r_file_perms;
