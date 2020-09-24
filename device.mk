@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
     libjustshoot_shim \
-    libgui_vendor
+    libgui_vendor \
+    libhidltransport
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8953_mot_potter_camera.xml:system/etc/camera/msm8953_mot_potter_camera.xml \
@@ -155,7 +156,9 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0
+    android.hidl.manager@1.0 \
+    libhwbinder \
+    libhwbinder.vendor
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
