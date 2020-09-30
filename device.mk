@@ -346,10 +346,6 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
      $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
-# Releasetools script
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/check_features.sh:$(TARGET_COPY_OUT_VENDOR)/bin/check_features.sh
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
