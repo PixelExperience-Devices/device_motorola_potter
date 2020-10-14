@@ -2,66 +2,51 @@
  {
     "repository": "DirtyUnicorns/android_kernel_motorola_msm8953",
     "target_path": "kernel/motorola/msm8953",
-    "branch" : "q10x"
- },
- {
-    "repository" : "DirtyUnicorns/android_hardware_qcom_thermal",
-    "target_path": "hardware/qcom-caf/thermal",
-    "branch"     : "q10x"
- },
- {
-    "repository" : "DirtyUnicorns/android_device_qcom_sepolicy",
-    "target_path": "device/qcom/sepolicy-legacy",
-    "branch"     : "q10x-legacy"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_motorola",
     "target_path": "vendor/motorola",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_audio",
     "target_path": "vendor/qcom/opensource/audio",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
-   "repository" : "DirtyUnicorns/android_vendor_qcom_opensource_cryptfs_hw",
-   "target_path": "vendor/qcom/opensource/cryptfs_hw",
-   "branch"     : "q10x"
+    "repository" : "DirtyUnicorns/android_vendor_qcom_opensource_cryptfs_hw",
+    "target_path": "vendor/qcom/opensource/cryptfs_hw",
+    "branch"     : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_data-ipa-cfg-mgr",
     "target_path": "vendor/qcom/opensource/data-ipa-cfg-mgr",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_dataservices",
     "target_path": "vendor/qcom/opensource/dataservices",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_interfaces",
     "target_path": "vendor/qcom/opensource/interfaces",
-    "branch" : "q10x"
- },
- {
-    "repository": "DirtyUnicorns/android_vendor_qcom_opensource_power",
-    "target_path": "vendor/qcom/opensource/power",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_vendor_codeaurora_telephony",
     "target_path": "vendor/codeaurora/telephony",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
     "repository": "DirtyUnicorns/android_system_qcom",
     "target_path": "system/qcom",
-    "branch" : "q10x"
+    "branch" : "r11x"
  },
  {
-   "repository":  "android_vendor_pixelgapps",
-   "target_path": "vendor/pixelgapps",
-   "branch":      "q10x"
+    "repository":  "android_vendor_pixelgapps",
+    "target_path": "vendor/pixelgapps",
+    "branch":      "r11x"
  }
 ]
