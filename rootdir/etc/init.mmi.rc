@@ -109,7 +109,7 @@ on post-fs-data
     mkdir /data/vendor/sensorhub 0770 system compass
 
     # Setup folder for native to transfer data to NativeDropBoxAgent
-    mkdir /data/system/dropbox-add 0730 system diag
+    mkdir /data/vendor/sensorhub_logs 0730 system diag
 
     # Create directory for cutback
     mkdir /data/vendor/misc/cutback 0770 radio wifi
