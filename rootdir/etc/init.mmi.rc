@@ -106,7 +106,7 @@ on post-fs-data
     chmod 0664 /sys/module/qpnp_smbcharger_mmi/parameters/eb_on_sw
 
     # Sensor Hub calibration data directory
-    mkdir /data/misc/sensorhub 0770 system compass
+    mkdir /data/vendor/sensorhub 0770 system compass
 
     # Setup folder for native to transfer data to NativeDropBoxAgent
     mkdir /data/system/dropbox-add 0730 system diag
