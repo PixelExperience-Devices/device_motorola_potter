@@ -126,6 +126,8 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
             $(SH_PATH)/HubSensors.cpp   \
             $(SH_PATH)/SensorList.cpp
 
+        LOCAL_HEADER_LIBRARIES += libhardware_headers
+
         ifeq ($(MOT_SENSOR_HUB_HW_TYPE_L0), true)
             # Sensor HAL file for M0 hub (low-tier) products (athene, etc...)
             LOCAL_SRC_FILES += \
@@ -201,6 +203,7 @@ ifeq ($(BOARD_USES_MOT_SENSOR_HUB), true)
     LOCAL_SRC_FILES += $(UTILS_PATH)/sensor_time.cpp
 
     LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+    LOCAL_HEADER_LIBRARIES += libhardware_headers
     # Need the UAPI output directory to be populated with motosh.h/stml0xx.h
     LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 

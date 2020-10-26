@@ -40,6 +40,8 @@ LOCAL_C_INCLUDES += \
     system/core/base/include \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
+LOCAL_HEADER_LIBRARIES += libhardware_headers
+
 LOCAL_C_INCLUDES += external/zlib
 
 LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr

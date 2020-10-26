@@ -23,9 +23,12 @@
 #include <sys/select.h>
 #include <string.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #include <cutils/log.h>
 #include <android-base/macros.h>
-
+#include <cutils/properties.h>
 #include "RearProxSensor.h"
 
 /*****************************************************************************/

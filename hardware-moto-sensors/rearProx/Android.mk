@@ -20,7 +20,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := sensors.rp
 
-
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 LOCAL_MODULE_TAGS := optional
 
