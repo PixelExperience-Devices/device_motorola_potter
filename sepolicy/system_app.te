@@ -21,5 +21,5 @@ get_prop(system_app, diag_prop);
 set_prop(system_app, fm_prop);
 get_prop(system_app, vendor_fm_prop);
 
-binder_call(system_app, qtitetherservice_service);
+#binder_call(system_app, qtitetherservice_service);
 binder_call(system_app, wificond);
