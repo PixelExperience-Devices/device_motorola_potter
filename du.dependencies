@@ -10,6 +10,11 @@
     "branch" : "r11x"
  },
  {
+  "repository":  "DirtyUnicorns/android_device_qcom_sepolicy",
+  "target_path": "device/qcom/sepolicy-legacy",
+  "branch":      "r11x-legacy"
+ },
+ {
     "repository": "DirtyUnicorns/android_vendor_qcom_opensource_audio",
     "target_path": "vendor/qcom/opensource/audio",
     "branch" : "r11x"
