@@ -14,6 +14,6 @@ allow mmi_laser vendor_shell_exec:file entrypoint;
 # Logs to /dev/kmsg
 allow mmi_laser kmsg_device:chr_file w_file_perms;
 
-#allow mmi_laser persist_file:dir search;
-#allow mmi_laser persist_file:file r_file_perms;
+allow mmi_laser persist_file:dir search;
+allow mmi_laser persist_file:file r_file_perms;
 allow mmi_laser sysfs_mmi_laser:file rw_file_perms;

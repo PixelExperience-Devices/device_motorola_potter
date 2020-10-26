@@ -1,2 +1,2 @@
-#allow netutils_wrapper netmgrd:socket { read write };
+allow netutils_wrapper netmgrd:socket { read write };
 
