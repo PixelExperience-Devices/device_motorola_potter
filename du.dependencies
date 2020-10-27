@@ -40,11 +40,6 @@
     "branch" : "r11x"
  },
  {
-    "repository": "DirtyUnicorns/android_vendor_qcom_opensource_power",
-    "target_path": "vendor/qcom/opensource/power",
-    "branch" : "r11x"
- },
- {
     "repository": "DirtyUnicorns/android_vendor_codeaurora_telephony",
     "target_path": "vendor/codeaurora/telephony",
     "branch" : "r11x"
