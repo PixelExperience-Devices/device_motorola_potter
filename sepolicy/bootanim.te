@@ -8,3 +8,6 @@ dontaudit bootanim system_data_file:dir read;
 
 allow bootanim sysfs_kgsl:dir search;
 allow bootanim sysfs_kgsl:file r_file_perms;
+
+allow bootanim userspace_reboot_exported_prop:file { getattr read open };
+

@@ -28,4 +28,3 @@ add_hwservice(hal_fingerprint_default, fpc_extension_service)
 # Allow hal_fingerprint_fpc to add and find fpc_extension_service
 allow hal_fingerprint_default fpc_extension_service:hwservice_manager { add find };
 
-

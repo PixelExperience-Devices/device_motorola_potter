@@ -1,2 +1,5 @@
 allow zygote self:capability sys_nice;
 allow zygote proc_cmdline:file {read open getattr};
+
+allow zygote device:file { open write };
+allow zygote exported_camera_prop:file { getattr open read };

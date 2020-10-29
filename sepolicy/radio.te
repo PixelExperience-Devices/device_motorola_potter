@@ -1,2 +1,4 @@
 allow radio system_app_data_file:dir getattr;
 allow radio qmuxd_socket:sock_file write;
+
+allow radio hidl_base_hwservice:hwservice_manager add;

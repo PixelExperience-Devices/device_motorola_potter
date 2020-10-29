@@ -34,3 +34,4 @@ allow mm-qcamerad camera_data_file:dir search;
 allow mm-qcamerad sysfs:file { open read };
 
 allow mm-qcamerad persist_camera_file:file { getattr open read };
+allow mm-qcamerad persist_camera_file:dir search;
