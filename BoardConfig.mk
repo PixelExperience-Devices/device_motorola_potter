@@ -87,9 +87,7 @@ TARGET_KERNEL_ARCH := arm64
 BOARD_DTBTOOL_ARGS := --force-v3
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := potter_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 10.0.5
+TARGET_KERNEL_SOURCE := kernel/motorola/potter
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -224,7 +222,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/SEPolicy.mk
+include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 

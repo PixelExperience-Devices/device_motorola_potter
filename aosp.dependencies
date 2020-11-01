@@ -1,0 +1,19 @@
+[
+  {
+    "repository":  "kernel_motorola_potter",
+    "target_path": "kernel/motorola/potter",
+    "branch": "eleven"
+  },
+  {
+    "remote": "pixel-devices-blobs",
+    "repository": "vendor_motorola_potter",
+    "target_path": "vendor/motorola/potter",
+    "branch": "eleven"
+  },
+  { 
+    "remote": "github",
+    "repository": "ArrowOS-Devices/packages_resources_MotoActions",
+    "target_path": "packages/resources/MotoActions",
+    "branch": "arrow-11.0"
+  }
+]
