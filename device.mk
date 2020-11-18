@@ -393,7 +393,7 @@ PRODUCT_COPY_FILES += \
 
 # Tethering
 PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
+    TetheringConfigOverlay-potter
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -429,7 +429,7 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     wificond \
     wifilogd \
-    WifiOverlay \
+    WifiOverlay-potter \
     wpa_supplicant \
     wpa_supplicant.conf \
     libQWiFiSoftApCfg \
