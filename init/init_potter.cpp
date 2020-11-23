@@ -35,8 +35,6 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-constexpr const char* BUILD_FINGERPRINT = "motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys";
-
 void property_override(char const prop[], char const value[], bool add = true)
 {
     auto pi = (prop_info *) __system_property_find(prop);
@@ -46,6 +44,13 @@ void property_override(char const prop[], char const value[], bool add = true)
     } else if (add) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
     }
+}
+
+void property_override_dual(char const system_prop[], char const vendor_prop[],
+    char const value[])
+{
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
 }
 
 /* Get Ram size for different variants */
@@ -83,6 +88,10 @@ void vendor_load_properties()
     sku.append(")");
     property_override("ro.product.model", sku.c_str());
 
+    // fingerprint
+    property_override("ro.build.description", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ1B.200105.004/6031802:user/release-keys");
+
     // rmt_storage
     std::string device = android::base::GetProperty("ro.boot.device", "");
     std::string radio = android::base::GetProperty("ro.boot.radio", "");
@@ -90,8 +99,6 @@ void vendor_load_properties()
     property_override("ro.vendor.hw.radio", radio.c_str());
     property_override("ro.hw.fps", "true");
     property_override("ro.hw.imager", "12MP");
-    property_override("ro.build.fingerprint", BUILD_FINGERPRINT);
-    property_override("ro.vendor.build.fingerprint", BUILD_FINGERPRINT);
 
     num_sims();
 
