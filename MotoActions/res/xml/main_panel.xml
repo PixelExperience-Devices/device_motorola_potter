@@ -17,17 +17,16 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-    <PreferenceCategory
+
+    <Preference
         android:key="gestures"
-        android:title="@string/device_gestures_title" >
-        <Preference
-            android:summary="@string/device_gestures_summary"
-            android:icon="@drawable/ic_settings_gestures">
-                <intent
-                    android:targetPackage="com.dirtyunicorns.settings.device"
-                    android:targetClass="com.dirtyunicorns.settings.device.GestureSettingsActivity" />
-        </Preference>
-    </PreferenceCategory>
+        android:title="@string/device_gestures_title"
+        android:summary="@string/device_gestures_summary"
+        android:icon="@drawable/ic_settings_gestures">
+            <intent
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.GestureSettingsActivity" />
+    </Preference>
 
     <!--Preference
         android:key="doze"
@@ -39,28 +38,24 @@
                 android:targetClass="com.dirtyunicorns.settings.device.DozeSettingsActivity" />
     </Preference-->
 
-    <PreferenceCategory
+    <Preference
         android:key="fp_gestures"
-        android:title="@string/fingerprint_gestures_title" >
-        <Preference
-            android:summary="@string/fingerprint_gestures_manage_summary"
-            android:icon="@drawable/ic_settings_fingerprint">
-                <intent
-                    android:targetPackage="com.dirtyunicorns.settings.device"
-                    android:targetClass="com.dirtyunicorns.settings.device.FPGestureSettingsActivity" />
-        </Preference>
-    </PreferenceCategory>
+        android:title="@string/fingerprint_gestures_title"
+        android:summary="@string/fingerprint_gestures_manage_summary"
+        android:icon="@drawable/ic_settings_fingerprint">
+            <intent
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.FPGestureSettingsActivity" />
+    </Preference>
 
-    <PreferenceCategory
+    <Preference
         android:key="screen_off_gestures"
-        android:title="@string/screen_off_gestures_title" >
-        <Preference
-            android:summary="@string/screen_off_gestures_manage_summary"
-            android:icon="@drawable/ic_settings_screen_off_gestures">
-                <intent
-                    android:targetPackage="com.dirtyunicorns.settings.device"
-                    android:targetClass="com.dirtyunicorns.settings.device.ScreenOffGestureSettingsActivity" />
-        </Preference>
-    </PreferenceCategory>
+        android:title="@string/screen_off_gestures_title"
+        android:summary="@string/screen_off_gestures_manage_summary"
+        android:icon="@drawable/ic_settings_screen_off_gestures">
+            <intent
+                android:targetPackage="com.dirtyunicorns.settings.device"
+                android:targetClass="com.dirtyunicorns.settings.device.ScreenOffGestureSettingsActivity" />
+    </Preference>
 
 </PreferenceScreen>
