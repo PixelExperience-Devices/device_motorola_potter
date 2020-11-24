@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device;
+package com.moto.actions;
 
 import android.app.IntentService;
 import android.content.Context;
@@ -27,19 +27,19 @@ import android.util.Log;
 import java.util.List;
 import java.util.LinkedList;
 
-import com.dirtyunicorns.settings.device.actions.UpdatedStateNotifier;
-import com.dirtyunicorns.settings.device.actions.CameraActivationSensor;
-import com.dirtyunicorns.settings.device.actions.ChopChopSensor;
-import com.dirtyunicorns.settings.device.actions.FlipToMute;
-import com.dirtyunicorns.settings.device.actions.LiftToSilence;
-import com.dirtyunicorns.settings.device.actions.ProximitySilencer;
+import com.moto.actions.actions.UpdatedStateNotifier;
+import com.moto.actions.actions.CameraActivationSensor;
+import com.moto.actions.actions.ChopChopSensor;
+import com.moto.actions.actions.FlipToMute;
+import com.moto.actions.actions.LiftToSilence;
+import com.moto.actions.actions.ProximitySilencer;
 
-import com.dirtyunicorns.settings.device.doze.DozePulseAction;
-import com.dirtyunicorns.settings.device.doze.GlanceSensor;
-import com.dirtyunicorns.settings.device.doze.ProximitySensor;
-import com.dirtyunicorns.settings.device.doze.ScreenReceiver;
-import com.dirtyunicorns.settings.device.doze.ScreenStateNotifier;
-import com.dirtyunicorns.settings.device.doze.StowSensor;
+import com.moto.actions.doze.DozePulseAction;
+import com.moto.actions.doze.GlanceSensor;
+import com.moto.actions.doze.ProximitySensor;
+import com.moto.actions.doze.ScreenReceiver;
+import com.moto.actions.doze.ScreenStateNotifier;
+import com.moto.actions.doze.StowSensor;
 
 public class MotoActionsService extends IntentService implements ScreenStateNotifier,
         UpdatedStateNotifier {
@@ -58,7 +58,7 @@ public class MotoActionsService extends IntentService implements ScreenStateNoti
                         new LinkedList<UpdatedStateNotifier>();
 
     public MotoActionsService(Context context) {
-        super("MotoActionService");
+        super("MotoActionsService");
         mContext = context;
 
         Log.d(TAG, "Starting");

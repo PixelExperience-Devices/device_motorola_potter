@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device.actions;
+package com.moto.actions.actions;
 
 import android.content.Context;
 import android.hardware.camera2.CameraManager;
@@ -24,7 +24,7 @@ import android.hardware.camera2.CameraAccessException;
 import android.os.Vibrator;
 import android.util.Log;
 
-import com.dirtyunicorns.settings.device.SensorAction;
+import com.moto.actions.SensorAction;
 
 public class TorchAction implements SensorAction {
     private static final String TAG = "MotoActions";

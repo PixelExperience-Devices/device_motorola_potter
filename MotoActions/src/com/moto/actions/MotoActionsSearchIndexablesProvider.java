@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device;
+package com.moto.actions;
 
 import android.database.Cursor;
 import android.database.MatrixCursor;
@@ -66,6 +66,9 @@ public class MotoActionsSearchIndexablesProvider extends SearchIndexablesProvide
         cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel,
                     DozeSettingsActivity.class.getName(),
                     R.drawable.ic_settings_doze)));
+        cursor.addRow(generateResourceRef(new SearchIndexableResource(1, R.xml.doze_panel_indexable,
+                    DozeSettingsActivity.class.getName(),
+                    R.drawable.ic_settings_doze)));
 
         return cursor;
     }
@@ -77,7 +80,7 @@ public class MotoActionsSearchIndexablesProvider extends SearchIndexablesProvide
         ref[COLUMN_INDEX_XML_RES_CLASS_NAME] = null;
         ref[COLUMN_INDEX_XML_RES_ICON_RESID] = sir.iconResId;
         ref[COLUMN_INDEX_XML_RES_INTENT_ACTION] = "com.android.settings.action.EXTRA_SETTINGS";
-        ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE] = "com.dirtyunicorns.settings.device";
+        ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE] = "com.moto.actions";
         ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_CLASS] = sir.className;
         return ref;
     }

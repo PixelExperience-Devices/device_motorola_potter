@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device;
+package com.moto.actions;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -33,10 +33,10 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreference;
 import androidx.preference.PreferenceFragment;
 
-import com.dirtyunicorns.settings.device.actions.Constants;
+import com.moto.actions.actions.Constants;
 
-import static com.dirtyunicorns.settings.device.actions.Constants.FP_HOME_KEY;
-import static com.dirtyunicorns.settings.device.actions.Constants.FP_HOME_KEY_OFF;
+import static com.moto.actions.actions.Constants.FP_HOME_KEY;
+import static com.moto.actions.actions.Constants.FP_HOME_KEY_OFF;
 
 public class FPGestureSettingsFragment extends PreferenceFragment {
 

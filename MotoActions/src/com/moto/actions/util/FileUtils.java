@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device.util;
+package com.moto.actions.util;
 
 import android.util.Log;
 

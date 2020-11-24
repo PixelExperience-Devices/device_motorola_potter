@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device.actions;
+package com.moto.actions.actions;
 
 public interface UpdatedStateNotifier {
     public void updateState();

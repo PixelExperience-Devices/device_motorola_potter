@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device.actions;
+package com.moto.actions.actions;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -26,8 +26,8 @@ import android.telecom.TelecomManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.dirtyunicorns.settings.device.MotoActionsSettings;
-import com.dirtyunicorns.settings.device.SensorHelper;
+import com.moto.actions.MotoActionsSettings;
+import com.moto.actions.SensorHelper;
 
 public class LiftToSilence extends PhoneStateListener implements SensorEventListener, UpdatedStateNotifier {
     private static final String TAG = "MotoActions-LiftToSilence";

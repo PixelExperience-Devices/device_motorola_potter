@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device;
+package com.moto.actions;
 
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
@@ -63,11 +63,11 @@ import android.view.ViewConfiguration;
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
-import com.dirtyunicorns.settings.device.util.FileUtils;
+import com.moto.actions.util.FileUtils;
 
 import java.util.List;
 
-import static com.dirtyunicorns.settings.device.actions.Constants.*;
+import static com.moto.actions.actions.Constants.*;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -608,7 +608,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
         final KeyEvent downEvent = new KeyEvent(now, now, KeyEvent.ACTION_DOWN,
                 keyCode, 0, 0, KeyCharacterMap.VIRTUAL_KEYBOARD, 0,
-                KeyEvent.FLAG_FROM_SYSTEM, InputDevice.SOURCE_NAVIGATION_BAR);
+                KeyEvent.FLAG_FROM_SYSTEM, InputDevice.SOURCE_CLASS_BUTTON);
         final KeyEvent upEvent = KeyEvent.changeAction(downEvent,
                 KeyEvent.ACTION_UP);
 
@@ -633,7 +633,7 @@ public class KeyHandler implements DeviceKeyHandler {
         mSearchManagerService = ISearchManager.Stub.asInterface(ServiceManager.getService(Context.SEARCH_SERVICE));
         if (mSearchManagerService != null) {
             try {
-                mSearchManagerService.launchAssist(mContext.getUserId(), new Bundle());
+                mSearchManagerService.launchAssist(new Bundle());
             } catch (RemoteException e) {
             }
         }

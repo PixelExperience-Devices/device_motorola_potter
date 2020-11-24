@@ -24,19 +24,19 @@
         android:summary="@string/device_gestures_summary"
         android:icon="@drawable/ic_settings_gestures">
             <intent
-                android:targetPackage="com.dirtyunicorns.settings.device"
-                android:targetClass="com.dirtyunicorns.settings.device.GestureSettingsActivity" />
+                android:targetPackage="com.moto.actions"
+                android:targetClass="com.moto.actions.GestureSettingsActivity" />
     </Preference>
 
-    <!--Preference
+    <Preference
         android:key="doze"
         android:title="@string/ambient_display_title"
         android:summary="@string/ambient_display_manage_summary"
         android:icon="@drawable/ic_settings_doze">
             <intent
-                android:targetPackage="com.dirtyunicorns.settings.device"
-                android:targetClass="com.dirtyunicorns.settings.device.DozeSettingsActivity" />
-    </Preference-->
+                android:targetPackage="com.moto.actions"
+                android:targetClass="com.moto.actions.DozeSettingsActivity" />
+    </Preference>
 
     <Preference
         android:key="fp_gestures"
@@ -44,8 +44,8 @@
         android:summary="@string/fingerprint_gestures_manage_summary"
         android:icon="@drawable/ic_settings_fingerprint">
             <intent
-                android:targetPackage="com.dirtyunicorns.settings.device"
-                android:targetClass="com.dirtyunicorns.settings.device.FPGestureSettingsActivity" />
+                android:targetPackage="com.moto.actions"
+                android:targetClass="com.moto.actions.FPGestureSettingsActivity" />
     </Preference>
 
     <Preference
@@ -54,8 +54,8 @@
         android:summary="@string/screen_off_gestures_manage_summary"
         android:icon="@drawable/ic_settings_screen_off_gestures">
             <intent
-                android:targetPackage="com.dirtyunicorns.settings.device"
-                android:targetClass="com.dirtyunicorns.settings.device.ScreenOffGestureSettingsActivity" />
+                android:targetPackage="com.moto.actions"
+                android:targetClass="com.moto.actions.ScreenOffGestureSettingsActivity" />
     </Preference>
 
 </PreferenceScreen>

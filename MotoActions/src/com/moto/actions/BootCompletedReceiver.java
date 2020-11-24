@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dirtyunicorns.settings.device;
+package com.moto.actions;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -27,9 +27,9 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.dirtyunicorns.settings.device.util.FileUtils;
-import com.dirtyunicorns.settings.device.actions.Constants;
-import com.dirtyunicorns.settings.device.ServiceWrapper.LocalBinder;
+import com.moto.actions.util.FileUtils;
+import com.moto.actions.actions.Constants;
+import com.moto.actions.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "MotoActions";
