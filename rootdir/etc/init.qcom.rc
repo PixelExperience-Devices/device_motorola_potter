@@ -321,6 +321,7 @@ on post-fs-data
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
+    mkdir /data/vendor/tombstones/rfs 0771 system system
 
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
