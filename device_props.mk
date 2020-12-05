@@ -36,7 +36,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=none \
     ro.qc.sdk.audio.ssr=false \
     vendor.use.voice.path.for.pcm.voip=false \
-    ro.config.media_vol_steps=25
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -221,6 +222,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apn_delay=5000 \
     persist.radio.adam=true \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.radio.dfr_mode_set=1 \
     persist.vendor.radio.force_get_pref=1 \
     persist.vendor.radio.no_wait_for_card=1 \
@@ -333,9 +335,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.gt_library=libqti-gt.so
 
 # SurfaceFlinger
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.early_phase_offset_ns=1500000 \
+    debug.sf.early_app_phase_offset_ns=1500000 \
+    debug.sf.early_gl_phase_offset_ns=3000000 \
+    debug.sf.early_gl_app_phase_offset_ns=15000000
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
+
+# Camera Aux Package list
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.google.android.apps.cameraslite,org.codeaurora.snapcam
 
 # Fast App Launch
 PRODUCT_PROPERTY_OVERRIDES += \
