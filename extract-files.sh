@@ -15,6 +15,10 @@
 # limitations under the License.
 #
 
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
+
 set -e
 
 DEVICE=potter
@@ -22,11 +26,11 @@ VENDOR=motorola
 
 # Load extractutils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-AOSP_ROOT="$MY_DIR"/../../..
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="$AOSP_ROOT"/vendor/aosp/build/tools/extract_utils.sh
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -61,17 +65,17 @@ function blob_fixup() {
 }
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$AOSP_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT"
 
-extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+extract "${MY_DIR}"/proprietary-files.txt "$SRC" "$SECTION"
 
 BLOB_ROOT="$AOSP_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
+if [ -s "${MY_DIR}"/../$DEVICE/proprietary-files.txt ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$AOSP_ROOT" false "$CLEAN_VENDOR"
+    setup_vendor "$DEVICE" "$VENDOR" "$ANDROID_ROOT" false "$CLEAN_VENDOR"
 
-    extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
+    extract "${MY_DIR}"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
 # Load libmot_gpu_mapper shim
@@ -79,4 +83,4 @@ MOT_GPU_MAPPER="$BLOB_ROOT"/vendor/lib/libmot_gpu_mapper.so
 patchelf --add-needed libgpu_mapper_shim.so "$MOT_GPU_MAPPER"
 
 
-"$MY_DIR"/setup-makefiles.sh
+"${MY_DIR}"/setup-makefiles.sh
