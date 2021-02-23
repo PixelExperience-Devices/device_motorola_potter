@@ -933,6 +933,3 @@ on property:sys.boot_completed=1
 
     # Set perfd properties
     setprop vendor.post_boot.parsed 1
-
-on property:apexd.status=ready
-    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
