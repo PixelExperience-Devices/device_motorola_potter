@@ -184,5 +184,5 @@
             <Limit name="performance-point-3840x2160" value="24" />
         </MediaCodec>
     </Decoders>
-    <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_google_video_le.xml" />
 </MediaCodecs>
