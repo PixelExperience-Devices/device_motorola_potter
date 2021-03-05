@@ -82,10 +82,6 @@ void num_sims() {
 
 void vendor_load_properties()
 {
-    // fingerprint
-    property_override("ro.build.description", "potter-user 8.1.0 OPSS28.85-17-4 28698 release-keys");
-    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys");
-
     // sku
     std::string sku = "Moto G5 Plus (";
     sku.append(android::base::GetProperty("ro.boot.hardware.sku", ""));
