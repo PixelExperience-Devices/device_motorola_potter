@@ -413,6 +413,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# Preload
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUI
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
