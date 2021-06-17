@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "TetheringConfigOverlay-potter",
+    name: "TetheringConfigOverlay",
     theme: "TetheringConfigOverlay",
     certificate: "platform",
     sdk_version: "current",
