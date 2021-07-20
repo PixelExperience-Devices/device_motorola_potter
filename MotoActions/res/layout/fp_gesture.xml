@@ -2,6 +2,7 @@
 <!--
 /*
 ** Copyright 2014, The Android Open Source Project
+** Copyright 2020, ronaxdevil <pratabidya.007@gmail.com>
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -21,6 +22,17 @@
               android:orientation="vertical"
               android:layout_height="match_parent"
               android:layout_width="match_parent">
+  
+    <TextView
+            android:id="@+id/fpgesture_header"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/fpgesture_png"
+            android:paddingTop="130dp"
+            android:text="@string/fingerprint_header_summery"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <include layout="@layout/switch_bar" />
 

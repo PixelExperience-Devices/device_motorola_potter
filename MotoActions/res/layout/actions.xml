@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2014, The Android Open Source Project
 ** Copyright 2020, ronaxdevil <pratabidya.007@gmail.com>
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,18 +21,16 @@
               android:orientation="vertical"
               android:layout_height="match_parent"
               android:layout_width="match_parent">
- 
+       
     <TextView
-            android:id="@+id/doze_header"
+            android:id="@+id/actions_header"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:gravity="center_horizontal"
-            android:background="@drawable/ambient_png"
-            android:paddingTop="130dp"
-            android:text="@string/doze_header_summery"
-            android:textColor="#FFFFFF"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <include layout="@layout/switch_bar" />
+            android:background="@drawable/motoactions_png"
+            android:paddingTop="115dp"
+            android:text="@string/actions_header_title"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>
