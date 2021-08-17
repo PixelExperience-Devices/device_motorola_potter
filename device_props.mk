@@ -353,10 +353,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
 
-# UI
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.use_fifo_ui=1
-
 # Tweak the memory management of the device, enable more background apps.. etc..
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.fha_enable=true \
